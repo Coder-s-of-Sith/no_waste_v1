@@ -5,4 +5,4 @@ from flask import render_template
 
 @app.route("/", methods=["GET","POST"])
 def home():
-    return render_template("layout.html")
+    return render_template("landingpage.html")
