@@ -28,4 +28,4 @@ from applications.controllers import *
 
 if __name__ == '__main__':
   # Run the Flask app
-  app.run()
+  app.run(debug=True)
