@@ -44,7 +44,7 @@
                 <h3>Already have an account?{% if page == "customer" %}<a href="{{url_for('customer_login')}}"> <span class="signin_link">Sign In</span></a>{% elif page == "vendor" %} <a href="{{url_for('vendor_login')}}"> <span class="signin_link">Sign In</span></a> {% endif %}</h3>
                 {% endif %}
             </div>
-            <form method="post" action="{{url_for('customer_register')}}">
+            <form method="post" action="{{url_for(action)}}">
                 {% for input_box in input_boxes %}
                 <div class="user-box">
                   <label>{{input_box["label"]}}</label><br>

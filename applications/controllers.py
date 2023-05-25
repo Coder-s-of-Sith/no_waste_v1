@@ -15,6 +15,7 @@ def customer_login():
         page = "customer"
         input_boxes = [{"label":"Email", "type": "email", "name" : "c_mail", "required" : "True"},{"label":"Password", "type": "password", "name" : "password", "required" : "True"}]
         submit_button = "Sign In"
+        action = "customer_login"
         return render_template("layout_login.html",page=page, input_boxes = input_boxes, submit_button = submit_button)
     if request.method == "POST":
         # email = request.form["c_mail"]
@@ -31,6 +32,7 @@ def customer_register():
         page = "customer"
         input_boxes = [{"label":"Name", "type": "text", "name" : "c_name", "required" : "True"},{"label":"Email", "type": "email", "name" : "email", "required" : "True"},{"label":"Password", "type": "password", "name" : "password", "required" : "True"}]
         submit_button = "Sign Up"
+        action = "customer_register"
         return render_template("layout_login.html",page = page ,input_boxes = input_boxes, submit_button = submit_button)
     if request.method == "POST":
         c_name = request.form["c_name"]
