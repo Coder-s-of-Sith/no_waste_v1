@@ -73,7 +73,12 @@ def vendor_register():
 
 @app.route("/place_order",methods=["GET","POST"])
 def place_order():
-    return render_template("placeorder.html")
+    if request.method == "GET":
+        return render_template("placeorder.html")
+    if request.method == "POST":
+        flash("order done details will be send on the email")
+        return render_template("placeorder.html")
+
 
 @app.route("/user",methods=["GET","POST"])
 def user():
