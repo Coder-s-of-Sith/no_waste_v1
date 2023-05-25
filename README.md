@@ -1,4 +1,5 @@
 # NoWaste 
+## [NoWaste UI/UX](https://patient-dew-7341.animaapp.io/#homepage)
 
 ## Machine Learning Image Classification
 
