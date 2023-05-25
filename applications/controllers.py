@@ -1,7 +1,9 @@
 from flask import current_app as app
 from applications.models import *
-
+from .database import db
 from flask import render_template, request
+
+
 
 @app.route("/", methods=["GET","POST"])
 def home():
@@ -11,11 +13,16 @@ def home():
 def customer_login():
     if request.method == "GET":
         page = "customer"
-        input_boxes = [{"label":"Name", "type": "text", "name" : "c_name", "required" : "True"},{"label":"Email", "type": "email", "name" : "c_mail", "required" : "True"},{"label":"Password", "type": "password", "name" : "password", "required" : "True"}]
+        input_boxes = [{"label":"Email", "type": "email", "name" : "c_mail", "required" : "True"},{"label":"Password", "type": "password", "name" : "password", "required" : "True"}]
         submit_button = "Sign In"
         return render_template("layout_login.html",page=page, input_boxes = input_boxes, submit_button = submit_button)
     if request.method == "POST":
-        request.form
+        # email = request.form["c_mail"]
+        # password = request.form['password']
+        # customer_data = Customer.query(c_mail = email).first()
+        # print(customer_data)
+        # # if customer_data:
+        return "hello"
 
 
 @app.route("/customer_register", methods=["GET","POST"])
@@ -25,6 +32,14 @@ def customer_register():
         input_boxes = [{"label":"Name", "type": "text", "name" : "c_name", "required" : "True"},{"label":"Email", "type": "email", "name" : "email", "required" : "True"},{"label":"Password", "type": "password", "name" : "password", "required" : "True"}]
         submit_button = "Sign Up"
         return render_template("layout_login.html",page = page ,input_boxes = input_boxes, submit_button = submit_button)
+    if request.method == "POST":
+        c_name = request.form["c_name"]
+        email = request.form["email"]
+        password = request.form["password"]
+        new_Customer= Customer(c_name = c_name,c_mail=email,c_password = password,address="NA",daily_collection=False,daily_collection_reward_points=0)
+        db.session.add(new_Customer)
+        db.session.commit()
+        return "hello"
 
 @app.route("/vendor_login",methods=["GET","POST"])
 def vendor_login():
@@ -46,3 +61,7 @@ def vendor_register():
 @app.route("/place_order",methods=["GET","POST"])
 def place_order():
     return render_template("placeorder.html")
+
+@app.route("/user",methods=["GET","POST"])
+def user():
+    return render_template("user.html")

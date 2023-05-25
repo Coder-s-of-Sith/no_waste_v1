@@ -138,8 +138,9 @@ section{
 }
 
 section p{
-  color:#03CEA4;
-  font-size: x-small;
+  color:#01745d;
+  font-size: medium;
+  font-weight : bold;
 }
 
 /* demo pricing */
@@ -360,4 +361,11 @@ li {
 
 span {
     color: #fff;
+}
+
+figcaption {
+  color: #04342a;
+  font-weight: bold;
+  padding: 15px 2px 2px 2px;
+  text-align: center;
 }

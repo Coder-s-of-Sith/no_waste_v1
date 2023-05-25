@@ -10,14 +10,14 @@
 <body>
     <header class="header">
         <div>
-            <a href="#"><img class="logo" src="{{url_for('static', filename='img/no_waste_logo.png')}}" alt="company logo"></a>
+            <a href="{{url_for('home')}}"><img class="logo" src="{{url_for('static', filename='img/no_waste_logo.png')}}" alt="company logo"></a>
         </div>
         <div class="btn">
             {% if page == "customer" %}
             <a href="{{url_for("vendor_register")}}">
             <button type="button" class="vendor_btn">
                 Join as Local Vendor
-            </button>
+            </button></a>
             {% elif page=="vendor" %}
             <a href="{{url_for("customer_login")}}">
             <button type="button" class="vendor_btn">
@@ -33,17 +33,26 @@
         <div class="form">
             <div class="heading_div_form">
                 <h2>Get Started</h2>
-                <h3>Already have an account?{% if page == "costumer" %}<a href="{{url_for("customer_login")}}"> <span class="signin_link">Sign In</span></a>{% elif page == "vendor" %} <a href="{{url_for("customer_login")}}"> <span class="signin_link">Sign In</span></a> {% endif %}</h3>
+                {% if  submit_button == "Sign In" %}
+                    <h3> Don't have a account? 
+                        {% if page == "customer" %}
+                            <a href="{{url_for('customer_register')}}"> <span class="signin_link">Register</span></a>
+                        {% elif page == "vendor" %} 
+                            <a href="{{url_for('vendor_register')}}"> <span class="signin_link">Register</span></a> 
+                        {% endif %}</h3>
+                {% elif  submit_button == "Sign Up" %}
+                <h3>Already have an account?{% if page == "customer" %}<a href="{{url_for('customer_login')}}"> <span class="signin_link">Sign In</span></a>{% elif page == "vendor" %} <a href="{{url_for('vendor_login')}}"> <span class="signin_link">Sign In</span></a> {% endif %}</h3>
+                {% endif %}
             </div>
-            <form>
+            <form method="post" action="{{url_for('customer_register')}}">
                 {% for input_box in input_boxes %}
                 <div class="user-box">
                   <label>{{input_box["label"]}}</label><br>
-                  <input type="{{input_box["type"]}}" name="{{input_box["name"]}}" required="{{input_box["required"]}}">
+                  <input type="{{input_box['type']}}" name="{{input_box['name']}}" required="{{input_box['required']}}">
                 </div>
                 {% endfor %}
                 <div class="btn-submit">
-                    <button type="button" class="vendor_btn">
+                    <button type="submit" class="vendor_btn" name="/Go">
                         {{submit_button}}
                     </button>
                 </div>

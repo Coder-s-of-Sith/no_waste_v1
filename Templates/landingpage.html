@@ -24,39 +24,40 @@
           </button></a>
         </div>
     </header>
-    <div class="offer-bar">SAVE MUCH MORE THIS SUMMER</div>
+    <div class="offer-bar" style = "font-family: 'Times New Roman', 'Times', 'serif';">SAVE MUCH MORE THIS SUMMER</div><br><br>
     <hero>
         </head>
         <body>
         
-        <div class="slideshow-container">
-        
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
-          <img src="{{url_for('static', filename='img/garbage_sds_1.png')}}" style="width:100%">
+          <div class="slideshow-container">
+            <div class="mySlides">
+                <div class="numbertext">1 / 3</div>
+                <img src="{{url_for('static', filename='img/image (6).png')}}" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">2 / 3</div>
+                <img src="{{url_for('static', filename='img/image (5).png')}}" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">3 / 3</div>
+                <img src="{{url_for('static', filename='img/image (8).png')}}" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
         </div>
-        
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
-          <img src="{{url_for('static', filename='img/garbage_sds_2.png')}}" style="width:100%">
-        </div>
-        
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
-          <img src="{{url_for('static', filename='img/garbage_sds_3.png')}}" style="width:100%">
-        </div>
-        
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
-        
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
         </div>
         <br>
         
-        <div style="text-align:center">
+        <!-- <div style="text-align:center">
           <span class="dot" onclick="currentSlide(1)"></span> 
           <span class="dot" onclick="currentSlide(2)"></span> 
           <span class="dot" onclick="currentSlide(3)"></span> 
-        </div>
+        </div> -->
     </hero>
     <section>
       <h2>Current Garbage Pricing</h2>
@@ -67,41 +68,47 @@
         <div class="row">
           <div class="col">
             <img src="{{url_for('static', filename='img/public/metal-2@2x.png')}}" alt="">
+            <figcaption>METAL</figcaption>
           </div>
           <div class="col">
             <img src="{{url_for('static', filename='img/public/paper-1@2x.png')}}" alt="">
+            <figcaption>PAPER</figcaption>
           </div>
           <div class="col">
             <img src="{{url_for('static', filename='img/public/new-project-7-1@2x.png')}}" alt="">
+            <figcaption>GLASS</figcaption>
           </div>
           <div class="col">
             <img src="{{url_for('static', filename='img/public/new-project-6-1@2x.png')}}" alt="">
+            <figcaption>E-WASTE</figcaption>
           </div>
           <div class="col">
             <img src="{{url_for('static', filename='img/public/new-project-5-2@2x.png')}}" alt="">
+            <figcaption>PLASTIC</figcaption>
           </div>
         </div>
       </div>
     </div>
     <section class="quote_container">
       <img class="quote_image" src="{{url_for('static', filename='img/public/trending-now-carousel@3x.png')}}" alt="">
-      <div class="quote"><span class="upper_commas">"</span>Streamline Waste, Transform the World<span class="upper_commas">"</span></div>
+      <div class="quote"><span class="upper_commas"><center>"</span>Streamline Waste, Transform the World<span class="upper_commas">"</center></span></div>
       <img class="quote_logo" src="{{url_for('static', filename='img/public/NoWasteLogoTr.png')}}" alt="">
-      <div class="quote_btn">Join this Initiative</div>
+      <div class="quote_btn">Join this Initiative</center></div>
     </section>
     <section class="models">
       <div class="models_container">
         <div class="model_1">
-          <h4 class="order_header">PLACE AND ORDER</h4>
+          <h4 class="order_header">PLACE AND ORDER</h4><br>
           <p class="order_desc">Conveniently Schedule and Collect Your Waste Hassle-Free! Simply place an order through our app to have your garbage picked up from your doorstep.</p>
           <p class="order_desc">Enjoy the ease and efficiency of our reliable waste collection service, leaving you with a cleaner and clutter-free environment.</p>
-          <a href="{{url_for(customer_login)}}"><div class="order_btn">Place and Order</div></a>
+          <br>
+          <a style="text-decoration: none" href="{{url_for("customer_login")}}"><div class="order_btn">Place and Order</div></a>
         </div>
         <div class="model_1">
-          <h4 class="order_header">SIGN UP FOR DAILY COLLECTION</h4>
+          <h4 class="order_header">SIGN UP FOR DAILY COLLECTION</h4><br>
           <p class="order_desc">Experience Daily Collection Made Effortless! Sign up for our daily waste collection service and enjoy the convenience of having your garbage picked up from your doorstep every day.</p>
           <p class="order_desc">Say goodbye to overflowing bins and hello to a cleaner, fresher living environment. Join us today and make waste management a breeze!</p>
-          <a href="{{url_for(customer_login)}}"><div class="order_btn">Sign Up</div></a>
+          <a style="text-decoration: none" href="{{url_for("customer_login")}}"><div class="order_btn">Sign Up</div></a>
         </div>
       </div>
     </section>

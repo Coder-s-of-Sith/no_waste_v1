@@ -164,15 +164,7 @@
 				</ul>
 			</div>
 		</footer>
-    <!-- Solana wallet connection script -->
-<script src="https://solana.com/sol-wallet-adapter.js"></script>
-<script>
-  const walletAdapter = new SolanaWalletAdapter(window.solana, "https://www.sollet.io");
-  const connectWalletBtn = document.querySelector("#connect-wallet-btn");
+   
 
-  connectWalletBtn.addEventListener("click", async () => {
-    await walletAdapter.connect();
-  });
-</script>
 	</body>
 </html>
