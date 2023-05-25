@@ -45,4 +45,4 @@ def vendor_register():
 
 @app.route("/place_order",methods=["GET","POST"])
 def place_order():
-    return render_template("placeOrder.html")
+    return render_template("placeorder.html")
