@@ -14,7 +14,7 @@ To streamline the deployment and management of our model, we have utilized the H
 
 ## Repository Structure
 
-- `app.py`: This file contains the code for the garbage segregation classification model, including the SqueezeNet architecture, training, and evaluation functions.
+- `app.py`: This file contains the code for the garbage segregation classification model and prediction.
 - `requirements.txt`: This file lists the dependencies required to run the model code.
 
 ## Model Deployment
