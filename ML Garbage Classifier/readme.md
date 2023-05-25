@@ -1,6 +1,6 @@
 # Garbage Segregation Classification Model
 
-![Garbage Segregation](https://www.imgbly.com/ib/vHZgUDWafA)
+![Garbage Segregation](https://www.imgbly.com/ib/vHZgUDWafA.png)
 
 Welcome to the Garbage Segregation Classification Model repository! This repository contains the machine learning model and associated resources developed by our garbage collection startup for classifying different types of garbage, including paper, food waste, wood, and leaves. The model is designed to facilitate the segregation of unsegregated waste for efficient recycling and disposal.
 
