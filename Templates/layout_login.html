@@ -5,7 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" type="text/css" href="../static/css/login.css" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Welcome to No Waste</title>
+    <style>
+        .flash-message {
+      position: relative;
+      color: #dc3545;
+      background-color: #f8d7da;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    
+    .flash-message .close-button {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
+    }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -32,6 +50,15 @@
         </div>
         <div class="form">
             <div class="heading_div_form">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                  <div id="flash-message" class="flash-message">
+                    {{ messages[0] }}
+                    <span class="close-button" onclick="removeFlashMessage()">&#x2716;</span>
+                  </div>
+                {% endif %}
+              {% endwith %}
+          
                 <h2>Get Started</h2>
                 {% if  submit_button == "Sign In" %}
                     <h3> Don't have a account? 
@@ -79,4 +106,10 @@
         </div>
     </footer>
 </body>
+<script>
+    function removeFlashMessage() {
+      var flashMessage = document.getElementById("flash-message");
+      flashMessage.parentNode.removeChild(flashMessage);
+    }
+  </script>
 </html>
