@@ -1,0 +1,46 @@
+body{
+    padding:0px;
+    margin:0px;
+}
+
+.fullname,
+.business,
+.firstname,
+.lastname,
+.address,
+.pincode,
+.city,
+.state,
+.dp{
+  width: 800px;
+  padding-left: 500px;
+}
+
+
+.heading{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.savebtn{
+    width: 100%;
+    left:40px;
+    padding:20px;
+}
+
+.profile{
+  width: 10%;
+  height: 10%;
+  border-radius: 20%;
+  object-fit: cover;
+}
+
+.container{
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+bottom: 500px;
+}
