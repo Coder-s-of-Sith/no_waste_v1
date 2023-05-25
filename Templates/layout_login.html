@@ -32,12 +32,12 @@
         </div>
         <div class="btn">
             {% if page == "customer" %}
-            <a href="{{url_for("vendor_register")}}">
+            <a href="{{url_for('vendor_register')}}">
             <button type="button" class="vendor_btn">
                 Join as Local Vendor
             </button></a>
             {% elif page=="vendor" %}
-            <a href="{{url_for("customer_login")}}">
+            <a href="{{url_for('customer_login')}}">
             <button type="button" class="vendor_btn">
                 Login as Customer
             </button></a>

@@ -39,31 +39,39 @@ class Collector(db.Model):
     collector_address = db.Column(db.String(200))
 
 
-class LocalVendor(db.Model):
-    vendor_id = db.Column(db.Integer, primary_key=True)
-    vendor_name = db.Column(db.String(100), nullable=False)
-    location_id = db.Column(db.Integer, nullable=False)
-    area_covered = db.Column(db.Integer)
-    address = db.Column(db.String(200))
-    vmail = db.Column(db.String(100))
-    password = db.Column(db.String(50))
+# class LocalVendor(db.Model):
+#     vendor_id = db.Column(db.Integer, primary_key=True)
+#     vendor_name = db.Column(db.String(100), nullable=False)
+#     location_id = db.Column(db.Integer, nullable=False)
+#     area_covered = db.Column(db.Integer)
+#     address = db.Column(db.String(200))
+#     vmail = db.Column(db.String(100))
+#     password = db.Column(db.String(50))
 
-    orders_on_demand = db.relationship('OrderOnDemand', secondary='order_on_demand_vendors')
+#     orders_on_demand = db.relationship('OrderOnDemand', secondary='order_on_demand_vendors')
 
-class OrderOnDemand(db.Model):
-    ood_order_id = db.Column(db.Integer, primary_key=True)
-    customer_id = db.Column(db.Integer, db.ForeignKey('customer.customer_id'), nullable=False)
-    product_selected_1 = db.Column(db.String(100))
-    product_selected_2 = db.Column(db.String(100))
-    product_selected_3 = db.Column(db.String(100))
-    product_selected_4 = db.Column(db.String(100))
-    product_selected_5 = db.Column(db.String(100))
+#     # def __init__(self, name, location_id, area_covered,address, vmail, password):
+#     #     self.vendor_name = name
+#     #     self.location_id = c_mail
+#     #     self.c_password = c_password
+#     #     self.address = address
+#     #     self.daily_collection = daily_collection
+#     #     self.daily_collection_reward_points = daily_collection_reward_points
 
-    vendors = db.relationship('LocalVendor', secondary='order_on_demand_vendors')
-    order_details = db.relationship('OrderOnDemandOrder', backref='order')
+# class OrderOnDemand(db.Model):
+#     ood_order_id = db.Column(db.Integer, primary_key=True)
+#     customer_id = db.Column(db.Integer, db.ForeignKey('customer.customer_id'), nullable=False)
+#     product_selected_1 = db.Column(db.String(100))
+#     product_selected_2 = db.Column(db.String(100))
+#     product_selected_3 = db.Column(db.String(100))
+#     product_selected_4 = db.Column(db.String(100))
+#     product_selected_5 = db.Column(db.String(100))
 
-class OrderOnDemandVendor(db.Model):
-    ood_order_id = db.Column(db.Integer, db.ForeignKey('order_on_demand.ood_order_id'), primary_key=True)
-    vendor_id = db.Column(db.Integer, db.ForeignKey('local_vendor.vendor_id'), primary_key=True)
-    rating = db.Column(db.Integer)
-    feedback = db.Column(db.String(200))
+#     vendors = db.relationship('LocalVendor', secondary='order_on_demand_vendors')
+#     order_details = db.relationship('OrderOnDemandOrder', backref='order')
+
+# class OrderOnDemandVendor(db.Model):
+#     ood_order_id = db.Column(db.Integer, db.ForeignKey('order_on_demand.ood_order_id'), primary_key=True)
+#     vendor_id = db.Column(db.Integer, db.ForeignKey('local_vendor.vendor_id'), primary_key=True)
+#     rating = db.Column(db.Integer)
+#     feedback = db.Column(db.String(200))

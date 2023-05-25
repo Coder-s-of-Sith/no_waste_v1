@@ -1,0 +1,3573 @@
+<!DOCTYPE html>
+
+
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=1916, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script><script src="https://animaapp.s3.amazonaws.com/launchpad-static/launchpad.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Lato:900,400,600,300,800,700|Inter:400");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/646d9c76a5dcf9df59dd3311.646d9c77916f8b9abf8ca3fc.Lsn32dt.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --alto: #d6dadd;
+  --black: #000000;
+  --bright-gray: #414450;
+  --caribbean-green: #03cea4;
+  --coral-red: #ff4141;
+  --genoa: #17686a;
+  --jumbo: #787a80;
+  --mystic: #e5e8ed;
+  --shark: #1e212c;
+  --white: #ffffff;
+ 
+  --font-size-l: 48px;
+  --font-size-m: 24px;
+  --font-size-s: 20px;
+  --font-size-xs: 18px;
+  --font-size-xxs: 16px;
+  --font-size-xxxs: 14px;
+  --font-size-xxxxs: 12px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-lato: "Lato", Helvetica;
+}
+.lato-bold-shark-14px {
+  color: var(--shark);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-xxxs);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.lato-bold-caribbean-green-24px {
+  color: var(--caribbean-green);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.lato-bold-white-14px {
+  color: var(--white);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-xxxs);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.lato-bold-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.lato-bold-black-14px {
+  color: var(--black);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-xxxs);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.lato-normal-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.lato-normal-jumbo-14px {
+  color: var(--jumbo);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-xxxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.lato-bold-shark-20px {
+  color: var(--shark);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.lato-normal-bright-gray-12px {
+  color: var(--bright-gray);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-xxxxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.lato-normal-jumbo-16px {
+  color: var(--jumbo);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.lato-black-shark-46px {
+  color: var(--shark);
+  font-family: var(--font-family-lato);
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.lato-bold-coral-red-24px {
+  color: var(--coral-red);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.lato-normal-jumbo-18px {
+  color: var(--jumbo);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.lato-normal-bright-gray-18px {
+  color: var(--bright-gray);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.lato-bold-white-48px {
+  color: var(--white);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+:root {
+}
+
+
+.span1-Ob0KHY {
+  color: #8fffa7;
+  font-style: normal;
+}
+/* screen - local-vender-bashboard */
+
+.local-vender-bashboard {
+  background-color: var(--white);
+  border: 1px none;
+  margin: 0px;
+  min-height: 2957px;
+  min-width: 1916px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.local-vender-bashboard .nowaste-C61RwL {
+  background-color: transparent;
+  height: 26px;
+  left: 1314px;
+  letter-spacing: 1.00px;
+  line-height: 25.6px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 4482px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.local-vender-bashboard .brands-C61RwL {
+  background-color: transparent;
+  height: 64px;
+  left: 345px;
+  position: absolute;
+  top: 8047px;
+  width: 1230px;
+}
+
+.local-vender-bashboard .brand-logo-S64WrO {
+  left: 888px;
+}
+
+.local-vender-bashboard .for-sale-logo-iw4s57 {
+  background-color: transparent;
+  height: 136px;
+  left: -1525px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: -11100px;
+  width: 178px;
+}
+
+.local-vender-bashboard .brand-logo-4WwjBJ {
+  left: 222px;
+}
+
+.local-vender-bashboard .higher-fit-logo-untitled-page-oailoP {
+  background-color: transparent;
+  height: 144px;
+  left: -864px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: -11104px;
+  width: 188px;
+}
+
+.local-vender-bashboard .brand-logo-rCxQYn {
+  left: 444px;
+}
+
+.local-vender-bashboard .sentinal-consulting-logo-k48lnL {
+  background-color: transparent;
+  height: 120px;
+  left: -1069px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: -11092px;
+  width: 156px;
+}
+
+.local-vender-bashboard .brand-logo-H2Dnbc {
+  left: 0px;
+}
+
+.local-vender-bashboard .in-depth-consulting-logo-untitled-page-j8FQQd {
+  background-color: transparent;
+  height: 134px;
+  left: -632px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: -11099px;
+  width: 174px;
+}
+
+.local-vender-bashboard .brand-logo-OxSNed {
+  left: 666px;
+}
+
+.local-vender-bashboard .national-health-logo-D5jkuP {
+  background-color: transparent;
+  height: 114px;
+  left: -1287px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: -11089px;
+  width: 148px;
+}
+
+.local-vender-bashboard .brand-logo-pzSHrR {
+  left: 1110px;
+}
+
+.local-vender-bashboard .del-mar-strategy-logo-HdsB0H {
+  background-color: transparent;
+  height: 130px;
+  left: -1743px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: -11097px;
+  width: 170px;
+}
+
+.local-vender-bashboard .blog-C61RwL {
+  background-color: transparent;
+  height: 602px;
+  left: 345px;
+  position: absolute;
+  top: 7325px;
+  width: 1232px;
+}
+
+.local-vender-bashboard .blog-0BbjVm {
+  background-color: var(--white);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px -4px #1e212c0d , 0px 12px 10px -6px #9a9ca514 , 0px 30px 24px -10px #9a9ca51a , 0px 80px 80px -20px #9a9ca529;
+  height: 482px;
+  left: 630px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 120px;
+  width: 600px;
+}
+
+.local-vender-bashboard .porta-habitant-vitae-n0azI5 {
+  background-color: transparent;
+  color: var(--bright-gray);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 25.6px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 409px;
+  width: 552px;
+}
+
+.local-vender-bashboard .lifestyle-voSxB5 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 21px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .divider-voSxB5 {
+  margin-left: -1198.00px;
+  margin-top: -10829.50px;
+  min-width: 12px;
+  position: relative;
+}
+
+.local-vender-bashboard .july-16-2020-voSxB5 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 21px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .divider-xdxVQM {
+  margin-left: -1091.00px;
+  margin-top: -10829.50px;
+  min-width: 12px;
+  position: relative;
+}
+
+.local-vender-bashboard .chat-tfKZ8h {
+  margin-left: -1445.00px;
+}
+
+.local-vender-bashboard .x4-comments-tfKZ8h {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 21px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .top-10-of-this-seasons-hottest-sneakers-n0azI5 {
+  background-color: transparent;
+  color: var(--genoa);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 330px;
+  white-space: nowrap;
+  width: 552px;
+}
+
+.local-vender-bashboard .image-n0azI5 {
+  height: 306px;
+  left: -206.33%;
+  object-fit: cover;
+  top: -10462px;
+  width: 100%;
+}
+
+.local-vender-bashboard .cursor-0BbjVm {
+  left: 731px;
+  top: -2539px;
+}
+
+.local-vender-bashboard .blog-onaUwB {
+  background-color: var(--white);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px -4px #1e212c08 , 0px 12px 10px -6px #9a9ca50a , 0px 30px 24px -10px #9a9ca50d , 0px 80px 80px -20px #9a9ca514;
+  height: 482px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 120px;
+  width: 600px;
+}
+
+.local-vender-bashboard .ipsum-aliquet-nisi-h-uS99Xl {
+  background-color: transparent;
+  color: var(--bright-gray);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 25.6px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 409px;
+  width: 552px;
+}
+
+.local-vender-bashboard .fashion-6bV55u {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 21px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .divider-6bV55u {
+  margin-left: -573.00px;
+  margin-top: -10829.50px;
+  min-width: 12px;
+  position: relative;
+}
+
+.local-vender-bashboard .august-24-2020-6bV55u {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 21px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .divider-zxEw7R {
+  margin-left: -446.00px;
+  margin-top: -10829.50px;
+  min-width: 12px;
+  position: relative;
+}
+
+.local-vender-bashboard .chat-4pxzYz {
+  margin-left: -830.00px;
+}
+
+.local-vender-bashboard .no-comments-4pxzYz {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 21px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .bag-trends-for-summer-2020-uS99Xl {
+  background-color: transparent;
+  height: auto;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 330px;
+  white-space: nowrap;
+  width: 552px;
+}
+
+.local-vender-bashboard .image-uS99Xl {
+  height: 306px;
+  left: -101.33%;
+  object-fit: cover;
+  top: -10462px;
+  width: 100%;
+}
+
+.local-vender-bashboard .btnoutlineregular-0BbjVm {
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid;
+  border-color: var(--genoa);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  left: 1100px;
+  overflow: hidden;
+  padding: 0px 32px;
+  position: absolute;
+  top: 16px;
+  width: fit-content;
+}
+
+.local-vender-bashboard .view-blog-bsp5sA {
+  background-color: transparent;
+  color: var(--genoa);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-xxxs);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.50px;
+  line-height: 44px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .fashion-blog-0BbjVm {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 59.8px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.local-vender-bashboard .instagram-C61RwL {
+  background-color: transparent;
+  height: 260px;
+  left: 345px;
+  position: absolute;
+  top: 6885px;
+  width: 1234px;
+}
+
+.local-vender-bashboard .image-vpRBZ9 {
+  height: 260px;
+  left: 707px;
+  object-fit: cover;
+  top: -3017px;
+  width: 260px;
+}
+
+.local-vender-bashboard .image-8Ctirm {
+  height: 260px;
+  left: 432px;
+  object-fit: cover;
+  top: -3017px;
+  width: 260px;
+}
+
+.local-vender-bashboard .image-7aiTr4 {
+  height: 260px;
+  left: 157px;
+  object-fit: cover;
+  top: -3017px;
+  width: 260px;
+}
+
+.local-vender-bashboard .btnsolidlargeicon-vpRBZ9 {
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid;
+  border-color: var(--genoa);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  left: 0px;
+  overflow: hidden;
+  padding: 0px 40px;
+  position: absolute;
+  top: 152px;
+  width: fit-content;
+}
+
+.local-vender-bashboard .instagram-x2Ktq1 {
+  background-color: transparent;
+  height: 24px;
+  margin-left: -648.00px;
+  margin-top: -10040.00px;
+  min-width: 24px;
+  position: relative;
+}
+
+.local-vender-bashboard .follow-instagram-x2Ktq1 {
+  background-color: transparent;
+  color: var(--genoa);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.50px;
+  line-height: 52px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .createx_store-vpRBZ9 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 59.8px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 32px;
+  white-space: nowrap;
+  width: 390px;
+}
+
+.local-vender-bashboard .follow-us-on-instagram-vpRBZ9 {
+  background-color: transparent;
+  color: var(--shark);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 700;
+  height: 24px;
+  left: 0px;
+  letter-spacing: 1.00px;
+  line-height: 24px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.local-vender-bashboard .services-C61RwL {
+  background-color: transparent;
+  height: 136px;
+  left: 345px;
+  position: absolute;
+  top: 6569px;
+  width: 1230px;
+}
+
+.local-vender-bashboard .icon-boxes-jVKv9h {
+  background-color: transparent;
+  height: 136px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 1230px;
+}
+
+.local-vender-bashboard .icon-box-NtbW5T {
+  left: 0px;
+}
+
+.local-vender-bashboard .ic-delivery-FuqEkG {
+  background-color: transparent;
+  height: 48px;
+  margin-left: -512.00px;
+  margin-top: -9586.00px;
+  min-width: 48px;
+  position: relative;
+}
+
+.local-vender-bashboard .fast-worldwide-shipping-WUriXk {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 240px;
+}
+
+.local-vender-bashboard .get-free-shipping-over-250-WUriXk {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 25.6px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 240px;
+}
+
+.local-vender-bashboard .divider-NtbW5T {
+  left: -323px;
+  position: absolute;
+  top: -9586px;
+  width: 136px;
+}
+
+.local-vender-bashboard .icon-box-JAsIwT {
+  left: 330px;
+}
+
+.local-vender-bashboard .ic-call-center-cE4A1x {
+  background-color: transparent;
+  height: 48px;
+  margin-left: -842.00px;
+  margin-top: -9586.00px;
+  min-width: 48px;
+  position: relative;
+}
+
+.local-vender-bashboard .x247-customer-support-FIAPy7 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 240px;
+}
+
+.local-vender-bashboard .friendly-247-customer-support-FIAPy7 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 25.6px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 240px;
+}
+
+.local-vender-bashboard .divider-JAsIwT {
+  left: 7px;
+  position: absolute;
+  top: -9586px;
+  width: 136px;
+}
+
+.local-vender-bashboard .icon-box-9vfQt8 {
+  left: 660px;
+}
+
+.local-vender-bashboard .ic-shield-9l2xbH {
+  background-color: transparent;
+  height: 48px;
+  margin-left: -1172.00px;
+  margin-top: -9586.00px;
+  min-width: 48px;
+  position: relative;
+}
+
+.local-vender-bashboard .money-back-guarantee-wJ2YX1 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 240px;
+}
+
+.local-vender-bashboard .we-return-money-within-30-days-wJ2YX1 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 25.6px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 240px;
+}
+
+.local-vender-bashboard .divider-9vfQt8 {
+  left: 337px;
+  position: absolute;
+  top: -9586px;
+  width: 136px;
+}
+
+.local-vender-bashboard .icon-box-9xVMTJ {
+  left: 990px;
+}
+
+.local-vender-bashboard .ic-credit-card-mvxgU5 {
+  background-color: transparent;
+  height: 48px;
+  margin-left: -1502.00px;
+  margin-top: -9586.00px;
+  min-width: 48px;
+  position: relative;
+}
+
+.local-vender-bashboard .secure-online-payment-FrITxF {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 240px;
+}
+
+.local-vender-bashboard .accept-all-major-credit-cards-FrITxF {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 25.6px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 240px;
+}
+
+.local-vender-bashboard .cta-mobile-app-C61RwL {
+  background-color: transparent;
+  height: 330px;
+  left: -15px;
+  position: absolute;
+  top: 6156px;
+  width: 1922px;
+}
+
+.local-vender-bashboard .background-mGuwsI {
+  background-color: var(--shark);
+  height: 300px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 30px;
+  width: 1920px;
+}
+
+.local-vender-bashboard .buttons-mGuwsI {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 24px;
+  height: auto;
+  left: 975px;
+  position: absolute;
+  top: 222px;
+  width: fit-content;
+}
+
+.local-vender-bashboard .app-store-EgIib3 {
+  background-color: transparent;
+  height: 11.996700286865234px;
+  margin-left: -1223.00px;
+  margin-top: -9395.00px;
+  min-width: 40.47814178466797px;
+  position: relative;
+}
+
+.local-vender-bashboard .google-play-EgIib3 {
+  background-color: transparent;
+  height: 48px;
+  margin-left: -1037.00px;
+  margin-top: -9395.00px;
+  min-width: 162px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.local-vender-bashboard .enjoy-mobile-shoppin-mGuwsI {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-lato);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 900;
+  height: auto;
+  left: 975px;
+  letter-spacing: 0.00px;
+  line-height: 41.6px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 90px;
+  width: 600px;
+}
+
+.local-vender-bashboard .image-mGuwsI {
+  height: 330px;
+  left: 54px;
+  top: -3017px;
+  width: 490px;
+}
+
+.local-vender-bashboard .sale-carousel-C61RwL {
+  background-color: transparent;
+  height: 790px;
+  left: 345px;
+  position: absolute;
+  top: 5209px;
+  width: 1232px;
+}
+
+.local-vender-bashboard .btnoutlinelarge-tyiePI {
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid;
+  border-color: var(--genoa);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  left: 498px;
+  overflow: hidden;
+  padding: 0px 40px;
+  position: absolute;
+  top: 738px;
+  width: fit-content;
+}
+
+.local-vender-bashboard .see-all-sale-products-sJVrlh {
+  background-color: transparent;
+  color: var(--genoa);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.50px;
+  line-height: 52px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .productlargehover-tyiePI {
+  background-color: var(--white);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px -4px #1e212c0d , 0px 12px 10px -6px #9a9ca514 , 0px 30px 24px -10px #9a9ca51a , 0px 80px 80px -20px #9a9ca529;
+  height: 646px;
+  left: 840px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  position: absolute;
+  top: 120px;
+  width: 390px;
+}
+
+.local-vender-bashboard .btnsolidregularicon-kseC78 {
+  align-items: center;
+  background-color: var(--genoa);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  left: 16px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding: 0px 32px;
+  position: absolute;
+  top: 586px;
+  width: 358px;
+}
+
+.local-vender-bashboard .cart-I3xlaa {
+  background-color: transparent;
+  height: 16px;
+  margin-left: -1593.50px;
+  margin-top: -8918.00px;
+  min-width: 16px;
+  position: relative;
+}
+
+.local-vender-bashboard .add-to-cart-I3xlaa {
+  background-color: transparent;
+  letter-spacing: 0.50px;
+  line-height: 44px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .colors-kseC78 {
+  align-items: center;
+  background-color: transparent;
+  bottom: 80px;
+  display: flex;
+  gap: 8px;
+  height: auto;
+  position: absolute;
+  right: 16px;
+  width: fit-content;
+}
+
+.local-vender-bashboard .color-5Mx1LU {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.local-vender-bashboard .ellipse-uXlWdS {
+  border-color: var(--genoa);
+}
+
+.local-vender-bashboard .color-uXlWdS {
+  background-color: var(--black);
+  border-radius: 8px;
+  height: 16px;
+  left: 4px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 4px;
+  width: 16px;
+}
+
+.local-vender-bashboard .color-U09Q2l {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.local-vender-bashboard .ellipse-SxoMlJ {
+  border-color: var(--alto);
+}
+
+.local-vender-bashboard .color-SxoMlJ {
+  background-color: #874e19;
+  border-radius: 8px;
+  height: 16px;
+  left: 4px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 4px;
+  width: 16px;
+}
+
+.local-vender-bashboard .color-fizxVe {
+  background-color: transparent;
+  height: 24px;
+  min-width: 24px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.local-vender-bashboard .ellipse-xuisrx {
+  border-color: var(--alto);
+}
+
+.local-vender-bashboard .color-xuisrx {
+  background-color: #c0dded;
+  border-radius: 8px;
+  height: 16px;
+  left: 4px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 4px;
+  width: 16px;
+}
+
+.local-vender-bashboard .sizes-kseC78 {
+  align-items: center;
+  background-color: transparent;
+  bottom: 80px;
+  display: flex;
+  gap: 8px;
+  height: auto;
+  left: 16px;
+  position: absolute;
+  width: fit-content;
+}
+
+.local-vender-bashboard .size-jSeAtL {
+  border-color: var(--alto);
+}
+
+.local-vender-bashboard .x36-zyg5Rg {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 24px;
+}
+
+.local-vender-bashboard .size-Cln67V {
+  border-color: var(--genoa);
+}
+
+.local-vender-bashboard .x37-62kqpf {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 24px;
+}
+
+.local-vender-bashboard .size-AwD47q {
+  border-color: var(--alto);
+}
+
+.local-vender-bashboard .x38-PK2txg {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 24px;
+}
+
+.local-vender-bashboard .size-HGuQxv {
+  border-color: var(--alto);
+}
+
+.local-vender-bashboard .x39-JPF9xE {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 24px;
+}
+
+.local-vender-bashboard .size-lXiFlX {
+  border-color: var(--alto);
+}
+
+.local-vender-bashboard .x40-a4VlHf {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 24px;
+}
+
+.local-vender-bashboard .price-kseC78 {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  left: 16px;
+  position: absolute;
+  top: 491px;
+  width: fit-content;
+}
+
+.local-vender-bashboard .price-qI2vB2 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 31.2px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .image-kseC78 {
+  height: 440px;
+  left: -1448px;
+  object-fit: cover;
+  top: -8346px;
+  width: 390px;
+}
+
+.local-vender-bashboard .right-chevron-kseC78 {
+  background-color: transparent;
+  height: 3.72%;
+  left: -281.54%;
+  position: absolute;
+  top: -1259.75%;
+  width: 6.15%;
+}
+
+.local-vender-bashboard .left-chevron-kseC78 {
+  background-color: transparent;
+  height: 3.72%;
+  left: -367.18%;
+  position: absolute;
+  top: -1259.75%;
+  width: 6.15%;
+}
+
+.local-vender-bashboard .wishlist-kseC78 {
+  bottom: 222px;
+}
+
+.local-vender-bashboard .shape-AYDnbp {
+  background-color: var(--white);
+  border-radius: 16px;
+  bottom: 0px;
+  height: 32px;
+  right: 0px;
+  width: 32px;
+}
+
+.local-vender-bashboard .heartoutline-AYDnbp {
+  bottom: 8354px;
+  position: absolute;
+  right: 1456px;
+  width: 16px;
+}
+
+.local-vender-bashboard .starfilled-hf3sSl {
+  margin-left: -1744.00px;
+}
+
+.local-vender-bashboard .starfilled-GxT6ck {
+  margin-left: -1728.00px;
+}
+
+.local-vender-bashboard .starfilled-jcyMlW {
+  margin-left: -1712.00px;
+}
+
+.local-vender-bashboard .starfilled-anCOEC {
+  margin-left: -1696.00px;
+}
+
+.local-vender-bashboard .starfilled-d3hsQx {
+  margin-left: -1680.00px;
+}
+
+.local-vender-bashboard .x20-flxgGT {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 25.6px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .cursor-tyiePI {
+  left: 849px;
+  top: -2297px;
+}
+
+.local-vender-bashboard .productlargeidle-tyiePI {
+  left: 420px;
+}
+
+.local-vender-bashboard .price-Hd2LB4 {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  left: 16px;
+  position: absolute;
+  top: 491px;
+  width: fit-content;
+}
+
+.local-vender-bashboard .price-3rWChC {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 31.2px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .image-Hd2LB4 {
+  height: 440px;
+  left: -1028px;
+  object-fit: cover;
+  top: -8346px;
+  width: 390px;
+}
+
+.local-vender-bashboard .wishlist-Hd2LB4 {
+  bottom: 114px;
+}
+
+.local-vender-bashboard .shape-LKc1Lg {
+  background-color: var(--white);
+  border-radius: 16px;
+  bottom: 0px;
+  height: 32px;
+  right: 0px;
+  width: 32px;
+}
+
+.local-vender-bashboard .heartoutline-LKc1Lg {
+  bottom: 8354px;
+  position: absolute;
+  right: 1036px;
+  width: 16px;
+}
+
+.local-vender-bashboard .productlargeidle-kr6piC {
+  left: 0px;
+}
+
+.local-vender-bashboard .price-XDxvLD {
+  align-items: flex-end;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  left: 16px;
+  position: absolute;
+  top: 491px;
+  width: fit-content;
+}
+
+.local-vender-bashboard .price-0vmEWi {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 31.2px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .image-XDxvLD {
+  height: 440px;
+  left: -608px;
+  object-fit: cover;
+  top: -8346px;
+  width: 390px;
+}
+
+.local-vender-bashboard .wishlist-XDxvLD {
+  bottom: 114px;
+}
+
+.local-vender-bashboard .shape-crwPAi {
+  background-color: var(--white);
+  border-radius: 16px;
+  bottom: 0px;
+  height: 32px;
+  right: 0px;
+  width: 32px;
+}
+
+.local-vender-bashboard .heartoutline-crwPAi {
+  bottom: 8354px;
+  position: absolute;
+  right: 616px;
+  width: 16px;
+}
+
+.local-vender-bashboard .starfilled-UUji0y {
+  margin-left: -904.00px;
+}
+
+.local-vender-bashboard .starfilled-OVIwTi {
+  margin-left: -888.00px;
+}
+
+.local-vender-bashboard .starfilled-hCdPgp {
+  margin-left: -872.00px;
+}
+
+.local-vender-bashboard .starfilled-44a4Xx {
+  margin-left: -856.00px;
+}
+
+.local-vender-bashboard .starfilled-e3Q2ql {
+  margin-left: -840.00px;
+}
+
+.local-vender-bashboard .slider-controlsidle-tyiePI {
+  background-color: transparent;
+  height: 24px;
+  left: 1158px;
+  position: absolute;
+  top: 36px;
+  width: 72px;
+}
+
+.local-vender-bashboard .next-btnhover-wFTNxm {
+  height: 100%;
+  left: 66.67%;
+  top: 0px;
+  width: 33.33%;
+}
+
+.local-vender-bashboard .right-j941E7 {
+  height: 100%;
+  left: -7358.33%;
+  top: -34425.00%;
+  width: 100%;
+}
+
+.local-vender-bashboard .prev-btn-wFTNxm {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 33.33%;
+}
+
+.local-vender-bashboard .left-4tbMuH {
+  background-color: transparent;
+  height: 100%;
+  left: -7358.33%;
+  position: absolute;
+  top: -34425.00%;
+  width: 100%;
+}
+
+.local-vender-bashboard .sale-up-to-70-tyiePI {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 59.8px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.local-vender-bashboard .profile-C61RwL {
+  right: 432px;
+  top: calc(50.00% - 4700px);
+}
+
+.local-vender-bashboard .btnsolidlarge-C61RwL {
+  background-color: #8fffa7;
+  border-radius: 40px;
+  height: auto;
+  right: 66px;
+  top: calc(50.00% - 4504px);
+  width: fit-content;
+}
+
+.local-vender-bashboard .lets-talk-FB6yC8 {
+  color: var(--black);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.local-vender-bashboard .terms-condition-C61RwL {
+  background-color: transparent;
+  height: auto;
+  left: 898px;
+  letter-spacing: 0.00px;
+  line-height: 25.6px;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+  position: absolute;
+  text-align: left;
+  top: 3487px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.local-vender-bashboard .squaresolidlightidle-C61RwL {
+  background-color: transparent;
+  height: 62px;
+  left: 1228px;
+  position: absolute;
+  top: 4465px;
+  width: 62px;
+}
+
+.local-vender-bashboard .shape-8YGJti {
+  background-color: var(--white);
+  border-radius: 4px;
+  height: 100%;
+  left: 0px;
+  opacity: 0.12;
+  top: 0px;
+  width: 100%;
+}
+
+.local-vender-bashboard .instagram-8YGJti {
+  background-color: transparent;
+  height: 50.00%;
+  left: -2379.84%;
+  position: absolute;
+  top: -12042.74%;
+  width: 50.00%;
+}
+
+.local-vender-bashboard .btnsolidlarge-VMr6Om {
+  background-color: var(--caribbean-green);
+  border-radius: 40px;
+  height: auto;
+  right: 22px;
+  top: calc(50.00% - 1696px);
+  width: fit-content;
+}
+
+.local-vender-bashboard .no-waste-C61RwL {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxs);
+  font-weight: 400;
+  height: auto;
+  left: 1300px;
+  letter-spacing: 0.00px;
+  line-height: 25.6px;
+  mix-blend-mode: normal;
+  top: 2370px;
+}
+
+.local-vender-bashboard .squaresolidlightidle-VMr6Om {
+  background-color: transparent;
+  height: 64px;
+  left: 1223px;
+  position: absolute;
+  top: 2357px;
+  width: 67px;
+}
+
+.local-vender-bashboard .shape-kRgslm {
+  background-color: var(--white);
+  border-radius: 4px;
+  height: 100%;
+  left: 0px;
+  opacity: 0.12;
+  top: 0px;
+  width: 100%;
+}
+
+.local-vender-bashboard .instagram-kRgslm {
+  background-color: transparent;
+  height: 50.00%;
+  left: 25.00%;
+  position: absolute;
+  top: 25.00%;
+  width: 50.00%;
+}
+
+.local-vender-bashboard .profile-VMr6Om {
+  right: 297px;
+  top: calc(50.00% - 1182px);
+}
+
+.local-vender-bashboard .rectangle-7-C61RwL {
+  background-color: var(--white);
+  height: 1271px;
+  left: 4px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 118px;
+  width: 1912px;
+}
+
+.local-vender-bashboard .rectangle-271-C61RwL {
+  background-color: var(--white);
+  height: 1271px;
+  left: 4px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 118px;
+  width: 1912px;
+}
+
+.local-vender-bashboard .rectangle-270-C61RwL {
+  background-color: var(--white);
+  height: 1271px;
+  left: -296px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 118px;
+  width: 1912px;
+}
+
+.local-vender-bashboard .rectangle-272-C61RwL {
+  background-color: var(--white);
+  height: 1271px;
+  left: -614px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 73px;
+  width: 1912px;
+}
+
+.local-vender-bashboard .btnsolidlarge-mzXdH9 {
+  background: linear-gradient(180deg, rgb(3.000000058673322, 206.0000029206276, 164.00000542402267) 0%, rgb(3.000000058673322, 206.0000029206276, 164.00000542402267) 100%);
+  background-color: transparent;
+  border-radius: 4px;
+  flex-direction: column;
+  height: 118px;
+  left: 84px;
+  top: 480px;
+  width: 516px;
+}
+
+.local-vender-bashboard .incoming-orders-C61RwL {
+  background-color: transparent;
+  height: 44px;
+  left: 102px;
+  letter-spacing: 0.50px;
+  line-height: 44px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 517px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.local-vender-bashboard .btnsolidlarge-QxM5SU {
+  background: linear-gradient(180deg, rgb(3.000000058673322, 206.0000029206276, 164.00000542402267) 0%, rgb(3.000000058673322, 206.0000029206276, 164.00000542402267) 100%);
+  background-color: transparent;
+  border-radius: 4px;
+  flex-direction: column;
+  height: 118px;
+  left: 97px;
+  top: 1226px;
+  width: 516px;
+}
+
+.local-vender-bashboard .btnsolidlarge-2P4qUJ {
+  background: linear-gradient(180deg, rgb(3.000000058673322, 206.0000029206276, 164.00000542402267) 0%, rgb(3.000000058673322, 206.0000029206276, 164.00000542402267) 100%);
+  background-color: transparent;
+  border-radius: 4px;
+  flex-direction: column;
+  height: 118px;
+  left: 105px;
+  top: 1959px;
+  width: 516px;
+}
+
+.local-vender-bashboard .current-orders-C61RwL {
+  background-color: transparent;
+  height: 44px;
+  left: 122px;
+  letter-spacing: 0.50px;
+  line-height: 44px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 1263px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.local-vender-bashboard .past-orders-C61RwL {
+  background-color: transparent;
+  height: 44px;
+  left: 180px;
+  letter-spacing: 0.50px;
+  line-height: 44px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 1996px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.local-vender-bashboard .sidebar-C61RwL {
+  height: 335px;
+  left: 97px;
+  top: 664px;
+}
+
+.local-vender-bashboard .btnsolidregular-MXFpZq {
+  background: linear-gradient(180deg, rgb(23.048012852668762, 104.80323269963264, 106.3754515349865) 0%, rgb(3.000000058673322, 206.0000029206276, 164.00000542402267) 100%);
+  left: 6.46%;
+}
+
+.local-vender-bashboard .btnsolidregular-gTxLpH {
+  background: linear-gradient(180deg, rgb(104.70889896154404, 106.3754515349865, 23.048012852668762) 0%, rgb(206.0000029206276, 173.51999938488007, 3.000000058673322) 100%);
+  left: 57.98%;
+}
+
+.local-vender-bashboard .price-MXFpZq {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: auto;
+  left: 6.46%;
+  overflow: hidden;
+  position: absolute;
+  top: 202px;
+  width: 87.07%;
+}
+
+.local-vender-bashboard .name-USH2ZI {
+  letter-spacing: 1.00px;
+  line-height: 21px;
+}
+
+.local-vender-bashboard .name-40CsNT {
+  letter-spacing: 0.00px;
+  line-height: 31.2px;
+}
+
+.local-vender-bashboard .sidebar-VMr6Om {
+  height: 335px;
+  left: 717px;
+  top: 664px;
+}
+
+.local-vender-bashboard .btnsolidregular-nTXHsZ {
+  background: linear-gradient(180deg, rgb(23.048012852668762, 104.80323269963264, 106.3754515349865) 0%, rgb(3.000000058673322, 206.0000029206276, 164.00000542402267) 100%);
+  left: 6.46%;
+}
+
+.local-vender-bashboard .btnsolidregular-V2tt6L {
+  background: linear-gradient(180deg, rgb(104.70889896154404, 106.3754515349865, 23.048012852668762) 0%, rgb(206.0000029206276, 173.51999938488007, 3.000000058673322) 100%);
+  left: 57.98%;
+}
+
+.local-vender-bashboard .price-nTXHsZ {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: auto;
+  left: 6.46%;
+  overflow: hidden;
+  position: absolute;
+  top: 202px;
+  width: 87.07%;
+}
+
+.local-vender-bashboard .name-kNmDXq {
+  letter-spacing: 1.00px;
+  line-height: 21px;
+}
+
+.local-vender-bashboard .user-name-97l8v6 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 31.2px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .sidebar-mzXdH9 {
+  height: 335px;
+  left: 1325px;
+  top: 664px;
+}
+
+.local-vender-bashboard .btnsolidregular-8ijm03 {
+  background: linear-gradient(180deg, rgb(23.048012852668762, 104.80323269963264, 106.3754515349865) 0%, rgb(3.000000058673322, 206.0000029206276, 164.00000542402267) 100%);
+  left: 6.46%;
+}
+
+.local-vender-bashboard .btnsolidregular-OhIO2v {
+  background: linear-gradient(180deg, rgb(104.70889896154404, 106.3754515349865, 23.048012852668762) 0%, rgb(206.0000029206276, 173.51999938488007, 3.000000058673322) 100%);
+  left: 57.98%;
+}
+
+.local-vender-bashboard .price-8ijm03 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: auto;
+  left: 6.46%;
+  overflow: hidden;
+  position: absolute;
+  top: 202px;
+  width: 87.07%;
+}
+
+.local-vender-bashboard .name-2ZqFxi {
+  letter-spacing: 1.00px;
+  line-height: 21px;
+}
+
+.local-vender-bashboard .sidebar-QxM5SU {
+  height: 373px;
+  left: 97px;
+  top: 1455px;
+}
+
+.local-vender-bashboard .price-NJ9D8R {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: auto;
+  left: 6.46%;
+  overflow: hidden;
+  position: absolute;
+  top: 202px;
+  width: 87.07%;
+}
+
+.local-vender-bashboard .name-DDoOnv {
+  letter-spacing: 1.00px;
+  line-height: 21px;
+}
+
+.local-vender-bashboard .next-btnhover-C61RwL {
+  box-shadow: 0px 4px 4px #00000040;
+  height: 73px;
+  left: 1833px;
+  top: 777px;
+  width: 67px;
+}
+
+.local-vender-bashboard .shape-d02rjs {
+  background-color: var(--caribbean-green);
+  border-radius: 33.5px/36.41px;
+  height: 73px;
+  left: 0px;
+  top: 0px;
+  width: 67px;
+}
+
+.local-vender-bashboard .right-d02rjs {
+  height: 36px;
+  left: 17px;
+  top: 18px;
+  width: 34px;
+}
+
+.local-vender-bashboard .next-btnhover-VMr6Om {
+  box-shadow: 0px 4px 4px #00000040;
+  height: 73px;
+  left: 1833px;
+  top: 1592px;
+  width: 67px;
+}
+
+.local-vender-bashboard .shape-E3Wn4i {
+  background-color: var(--caribbean-green);
+  border-radius: 33.5px/36.41px;
+  height: 73px;
+  left: 0px;
+  top: 0px;
+  width: 67px;
+}
+
+.local-vender-bashboard .right-E3Wn4i {
+  height: 36px;
+  left: 17px;
+  top: 18px;
+  width: 34px;
+}
+
+.local-vender-bashboard .next-btnhover-mzXdH9 {
+  box-shadow: 0px 4px 4px #00000040;
+  height: 73px;
+  left: 1833px;
+  top: 2226px;
+  width: 67px;
+}
+
+.local-vender-bashboard .shape-A5NdpG {
+  background-color: var(--caribbean-green);
+  border-radius: 33.5px/36.41px;
+  height: 73px;
+  left: 0px;
+  top: 0px;
+  width: 67px;
+}
+
+.local-vender-bashboard .right-A5NdpG {
+  height: 36px;
+  left: 17px;
+  top: 18px;
+  width: 34px;
+}
+
+.local-vender-bashboard .sidebar-2P4qUJ {
+  height: 373px;
+  left: 731px;
+  top: 1455px;
+}
+
+.local-vender-bashboard .price-qj8xnc {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: auto;
+  left: 6.46%;
+  overflow: hidden;
+  position: absolute;
+  top: 202px;
+  width: 87.07%;
+}
+
+.local-vender-bashboard .name-YTGVX0 {
+  letter-spacing: 1.00px;
+  line-height: 21px;
+}
+
+.local-vender-bashboard .sidebar-qr8e7q {
+  height: 272px;
+  left: 107px;
+  top: 2140px;
+}
+
+.local-vender-bashboard .price-siRYvK {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 88px;
+  left: 6.46%;
+  overflow: hidden;
+  position: absolute;
+  top: 202px;
+  width: 87.07%;
+}
+
+.local-vender-bashboard .name-yfvp9x {
+  letter-spacing: 1.00px;
+  line-height: 21px;
+}
+
+.local-vender-bashboard .sidebar-J1YQmd {
+  height: 272px;
+  left: 719px;
+  top: 2140px;
+}
+
+.local-vender-bashboard .price-my3GxN {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 88px;
+  left: 6.46%;
+  overflow: hidden;
+  position: absolute;
+  top: 202px;
+  width: 87.07%;
+}
+
+.local-vender-bashboard .name-7cHcDx {
+  letter-spacing: 1.00px;
+  line-height: 21px;
+}
+
+.local-vender-bashboard .sidebar-a5WPlX {
+  height: 272px;
+  left: 1325px;
+  top: 2130px;
+}
+
+.local-vender-bashboard .price-nbx9DU {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 88px;
+  left: 6.46%;
+  overflow: hidden;
+  position: absolute;
+  top: 202px;
+  width: 87.07%;
+}
+
+.local-vender-bashboard .name-htyGjN {
+  letter-spacing: 1.00px;
+  line-height: 21px;
+}
+
+.local-vender-bashboard .sidebar-HlKRTo {
+  height: 373px;
+  left: 1325px;
+  top: 1452px;
+}
+
+.local-vender-bashboard .price-UEer6r {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: auto;
+  left: 6.46%;
+  overflow: hidden;
+  position: absolute;
+  top: 202px;
+  width: 87.07%;
+}
+
+.local-vender-bashboard .name-LSRp4L {
+  letter-spacing: 1.00px;
+  line-height: 21px;
+}
+
+.local-vender-bashboard .btnsolidlarge-qr8e7q {
+  background: linear-gradient(180deg, rgb(3.000000058673322, 206.0000029206276, 164.00000542402267) 0%, rgb(3.000000058673322, 206.0000029206276, 164.00000542402267) 100%);
+  background-color: transparent;
+  border-radius: 4px;
+  flex-direction: column;
+  height: 344px;
+  left: -1px;
+  top: 46px;
+  width: 1914px;
+}
+
+.local-vender-bashboard .explore-courses-l0lLCe {
+  background-color: transparent;
+  letter-spacing: 0.50px;
+  line-height: 52px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .rectangle-269-C61RwL {
+  background-color: var(--shark);
+  height: 118px;
+  left: -1px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 1914px;
+}
+
+.local-vender-bashboard .btnsolidlarge-J1YQmd {
+  background-color: var(--caribbean-green);
+  border-radius: 40px;
+  cursor: pointer;
+  height: auto;
+  right: 18px;
+  top: calc(50.00% - 1454px);
+  width: fit-content;
+}
+
+.local-vender-bashboard .profile-mzXdH9 {
+  right: 193px;
+  top: calc(50.00% - 1442px);
+}
+
+.local-vender-bashboard .title-C61RwL {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-lato);
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 800;
+  height: 55px;
+  left: 73px;
+  letter-spacing: 0.50px;
+  line-height: 52px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 153px;
+  white-space: nowrap;
+  width: 638px;
+}
+
+.local-vender-bashboard .orders-C61RwL {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-lato);
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 800;
+  height: 55px;
+  left: 84px;
+  letter-spacing: 0.50px;
+  line-height: 52px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 302px;
+  white-space: nowrap;
+  width: 167px;
+}
+
+.local-vender-bashboard .analytics-C61RwL {
+  background-color: transparent;
+  color: var(--white);
+  cursor: pointer;
+  font-family: var(--font-family-lato);
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 800;
+  height: 55px;
+  left: 311px;
+  letter-spacing: 0.50px;
+  line-height: 52px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 303px;
+  white-space: nowrap;
+  width: 212px;
+}
+
+.local-vender-bashboard .group-1-C61RwL {
+  background-color: transparent;
+  height: 77px;
+  left: 44px;
+  position: absolute;
+  top: 17px;
+  width: 301px;
+}
+
+.local-vender-bashboard .no-waste-VyzZeT {
+  -webkit-text-stroke: 2px #204b2a;
+  color: transparent;
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-l);
+  font-weight: 900;
+  height: 62px;
+  left: 89px;
+  letter-spacing: 1.00px;
+  line-height: 62.4px;
+  text-shadow: 0px 4px 4px #00000040;
+  top: 7px;
+}
+
+.local-vender-bashboard .span0-Ob0KHY {
+  color: var(--white);
+  font-style: normal;
+}
+
+.local-vender-bashboard .screenshot_50-removebg-preview-1-VyzZeT {
+  background-color: transparent;
+  height: 77px;
+  left: 0px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 78px;
+}
+
+.local-vender-bashboard .footer-C61RwL {
+  background-color: var(--shark);
+  height: 355px;
+  left: -48px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 2613px;
+  width: 2009px;
+}
+
+.local-vender-bashboard .go-to-top-iPe1yZ {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1508px;
+  letter-spacing: 0.00px;
+  line-height: 25.6px;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+  position: absolute;
+  text-align: left;
+  top: 304px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.local-vender-bashboard .copyright-iPe1yZ {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  height: auto;
+  left: 345px;
+  overflow: hidden;
+  position: absolute;
+  top: 308px;
+  width: fit-content;
+}
+
+.local-vender-bashboard .all-rights-reserved-made-with-iWHG8v {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-xxxxs);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .heartoutline-iWHG8v {
+  min-width: 16px;
+  position: relative;
+}
+
+.local-vender-bashboard .by-createx-studio-iWHG8v {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-xxxxs);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .divider-iPe1yZ {
+  left: 48px;
+  position: absolute;
+  top: 283px;
+  width: 1872px;
+}
+
+.local-vender-bashboard .download-app-iPe1yZ {
+  background-color: transparent;
+  height: 26px;
+  left: 1231px;
+  position: absolute;
+  top: 60px;
+  width: 242px;
+}
+
+.local-vender-bashboard .download-our-app-CMMahF {
+  background-color: transparent;
+  height: 26px;
+  left: 0px;
+  letter-spacing: 1.00px;
+  line-height: 25.6px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.local-vender-bashboard .contacts-iPe1yZ {
+  background-color: transparent;
+  height: 150px;
+  left: 871px;
+  position: absolute;
+  top: 60px;
+  width: 210px;
+}
+
+.local-vender-bashboard .socilas-3imQwF {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  left: 0px;
+  position: absolute;
+  top: 118px;
+  width: fit-content;
+}
+
+.local-vender-bashboard .squaresolidlightidle-eDIoEh {
+  background-color: transparent;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.local-vender-bashboard .shape-6T06sn {
+  background-color: var(--white);
+  border-radius: 4px;
+  height: 100%;
+  left: 0px;
+  opacity: 0.12;
+  top: 0px;
+  width: 100%;
+}
+
+.local-vender-bashboard .facebook-6T06sn {
+  background-color: transparent;
+  height: 50.00%;
+  left: 25.00%;
+  position: absolute;
+  top: 25.00%;
+  width: 50.00%;
+}
+
+.local-vender-bashboard .squaresolidlightidle-RD7FAi {
+  background-color: transparent;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.local-vender-bashboard .shape-6VpUsb {
+  background-color: var(--white);
+  border-radius: 4px;
+  height: 100%;
+  left: 0px;
+  opacity: 0.12;
+  top: 0px;
+  width: 100%;
+}
+
+.local-vender-bashboard .instagram-6VpUsb {
+  background-color: transparent;
+  height: 50.00%;
+  left: 25.00%;
+  position: absolute;
+  top: 25.00%;
+  width: 50.00%;
+}
+
+.local-vender-bashboard .squaresolidlightidle-RQrpv2 {
+  background-color: transparent;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.local-vender-bashboard .shape-MJIUEg {
+  background-color: var(--white);
+  border-radius: 4px;
+  height: 100%;
+  left: 0px;
+  opacity: 0.12;
+  top: 0px;
+  width: 100%;
+}
+
+.local-vender-bashboard .twitter-MJIUEg {
+  background-color: transparent;
+  height: 50.00%;
+  left: 25.00%;
+  position: absolute;
+  top: 25.00%;
+  width: 50.00%;
+}
+
+.local-vender-bashboard .squaresolidlightidle-hazv6o {
+  background-color: transparent;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.local-vender-bashboard .shape-Qb3sFy {
+  background-color: var(--white);
+  border-radius: 4px;
+  height: 100%;
+  left: 0px;
+  opacity: 0.12;
+  top: 0px;
+  width: 100%;
+}
+
+.local-vender-bashboard .you-tube-Qb3sFy {
+  background-color: transparent;
+  height: 50.00%;
+  left: 25.00%;
+  position: absolute;
+  top: 25.00%;
+  width: 50.00%;
+}
+
+.local-vender-bashboard .subtract-ZUQwMR {
+  background-color: transparent;
+  height: 70.02%;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 15.00%;
+  width: 100%;
+}
+
+.local-vender-bashboard .squaresolidlightidle-b5fumQ {
+  background-color: transparent;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.local-vender-bashboard .shape-fIJszQ {
+  background-color: var(--white);
+  border-radius: 4px;
+  height: 100%;
+  left: 0px;
+  opacity: 0.12;
+  top: 0px;
+  width: 100%;
+}
+
+.local-vender-bashboard .pinterest-fIJszQ {
+  background-color: transparent;
+  height: 50.00%;
+  left: 25.00%;
+  position: absolute;
+  top: 25.00%;
+  width: 50.00%;
+}
+
+.local-vender-bashboard .email-3imQwF {
+  align-items: flex-start;
+  display: flex;
+  gap: 4px;
+  height: auto;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 68px;
+}
+
+.local-vender-bashboard .email-zkAeya {
+  letter-spacing: 0.00px;
+  line-height: 25.6px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.local-vender-bashboard .hellocreatexcom-zkAeya {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 25.6px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .call-3imQwF {
+  align-items: center;
+  display: flex;
+  gap: 4px;
+  height: auto;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+}
+
+.local-vender-bashboard .call-Mu4NhQ {
+  letter-spacing: 0.00px;
+  line-height: 25.6px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.local-vender-bashboard .get-in-touch-3imQwF {
+  background-color: transparent;
+  height: 26px;
+  left: 0px;
+  letter-spacing: 1.00px;
+  line-height: 25.6px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.local-vender-bashboard .help-iPe1yZ {
+  height: 184px;
+  left: 345px;
+  top: 60px;
+  width: 181px;
+}
+
+.local-vender-bashboard .links-UrIBTO {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: auto;
+  left: 0px;
+  position: absolute;
+  top: 38px;
+  width: fit-content;
+}
+
+.local-vender-bashboard .delivery-returns-xBZxxp {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 25.6px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .faq-xBZxxp {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 25.6px;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .track-order-xBZxxp {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 25.6px;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .contacts-xBZxxp {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 25.6px;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .blog-xBZxxp {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 25.6px;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .help-UrIBTO {
+  height: 26px;
+  left: 0px;
+  letter-spacing: 1.00px;
+  line-height: 25.6px;
+  mix-blend-mode: normal;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.local-vender-bashboard .rectangle-279-C61RwL {
+  background-color: var(--white);
+  height: 30px;
+  left: 125px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 362px;
+  width: 91px;
+}
+
+.local-vender-bashboard .x5-C61RwL {
+  font-size: 72px;
+  left: 627px;
+  line-height: 93.6px;
+  top: 490px;
+  width: 122px;
+}
+
+.local-vender-bashboard .group-6-C61RwL {
+  background-color: transparent;
+  height: 48px;
+  left: 600px;
+  position: absolute;
+  top: 420px;
+  width: 52px;
+}
+
+.local-vender-bashboard .x5-PIEh7b {
+  font-size: 36px;
+  left: 14px;
+  line-height: 46.8px;
+  top: 1px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.local-vender-bashboard .group-7-C61RwL {
+  background-color: transparent;
+  height: 48px;
+  left: 614px;
+  position: absolute;
+  top: 1178px;
+  width: 52px;
+}
+
+.local-vender-bashboard .x7-SO40Oe {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-lato);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 900;
+  height: auto;
+  left: 14px;
+  letter-spacing: 1.00px;
+  line-height: 46.8px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 1px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.local-vender-bashboard .group-8-C61RwL {
+  background-color: transparent;
+  height: 48px;
+  left: 628px;
+  position: absolute;
+  top: 1900px;
+  width: 52px;
+}
+
+.local-vender-bashboard .x35-3cZhlu {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-lato);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 900;
+  height: auto;
+  left: 10px;
+  letter-spacing: 1.00px;
+  line-height: 31.2px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.local-vender-bashboard .no-waste-VMr6Om {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxs);
+  font-weight: 400;
+  height: auto;
+  left: 1261px;
+  letter-spacing: 0.00px;
+  line-height: 25.6px;
+  mix-blend-mode: normal;
+  top: 2725px;
+}
+
+.local-vender-bashboard .squaresolidlightidle-mzXdH9 {
+  background-color: transparent;
+  height: 64px;
+  left: 1182px;
+  position: absolute;
+  top: 2711px;
+  width: 67px;
+}
+
+.local-vender-bashboard .shape-DwZbGQ {
+  background-color: var(--white);
+  border-radius: 4px;
+  height: 100%;
+  left: 0px;
+  opacity: 0.12;
+  top: 0px;
+  width: 100%;
+}
+
+.local-vender-bashboard .instagram-DwZbGQ {
+  background-color: transparent;
+  height: 50.00%;
+  left: 25.00%;
+  position: absolute;
+  top: 25.00%;
+  width: 50.00%;
+}
+
+.local-vender-bashboard .accept {
+  background-color: transparent;
+  height: 44px;
+  left: 77px;
+  letter-spacing: 0.50px;
+  line-height: 44px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 272px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.local-vender-bashboard .address {
+  background-color: transparent;
+  letter-spacing: 1.00px;
+  line-height: 21px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .assigned {
+  background-color: transparent;
+  height: 44px;
+  left: 8px;
+  letter-spacing: 0.50px;
+  line-height: 44px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 313px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.local-vender-bashboard .brand-logo {
+  background-color: transparent;
+  height: 64px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 120px;
+}
+
+.local-vender-bashboard .btn-text {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 8px;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  width: fit-content;
+}
+
+.local-vender-bashboard .btnsolidlarge {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding: 0px 40px;
+  position: absolute;
+}
+
+.local-vender-bashboard .btnsolidregular {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding: 0px 32px;
+  position: absolute;
+  top: 272px;
+  width: 33.33%;
+}
+
+.local-vender-bashboard .call {
+  background-color: transparent;
+  width: fit-content;
+}
+
+.local-vender-bashboard .chat {
+  background-color: transparent;
+  height: 16px;
+  margin-top: -10831.50px;
+  min-width: 16px;
+  position: relative;
+}
+
+.local-vender-bashboard .comments {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 8px;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  width: fit-content;
+}
+
+.local-vender-bashboard .cursor {
+  background-color: transparent;
+  height: 25px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  width: 26px;
+}
+
+.local-vender-bashboard .dates {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: auto;
+  left: 6.46%;
+  overflow: hidden;
+  position: absolute;
+  top: 21px;
+  width: 87.07%;
+}
+
+.local-vender-bashboard .decline {
+  background-color: transparent;
+  height: 44px;
+  left: 339px;
+  letter-spacing: 0.50px;
+  line-height: 44px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 272px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.local-vender-bashboard .divider {
+  background-color: transparent;
+  height: 1px;
+  object-fit: cover;
+}
+
+.local-vender-bashboard .duration {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: auto;
+  left: 6.46%;
+  overflow: hidden;
+  position: absolute;
+  top: 97px;
+  width: 87.07%;
+}
+
+.local-vender-bashboard .ellipse {
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 12px;
+  height: 24px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 24px;
+}
+
+.local-vender-bashboard .ellipse-10 {
+  background-color: var(--caribbean-green);
+  border-radius: 11px/11.5px;
+  height: 23px;
+  left: 304px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 293px;
+  width: 22px;
+}
+
+.local-vender-bashboard .ellipse-11 {
+  background-color: var(--white);
+  border: 5px solid;
+  border-color: var(--caribbean-green);
+  border-radius: 11px/11.5px;
+  height: 23px;
+  left: 441px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 293px;
+  width: 22px;
+}
+
+.local-vender-bashboard .ellipse-12 {
+  background-color: var(--caribbean-green);
+  border-radius: 25px/24px;
+  height: 48px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 50px;
+}
+
+.local-vender-bashboard .ellipse-8 {
+  background-color: var(--caribbean-green);
+  border-radius: 11px/11.5px;
+  height: 23px;
+  left: 33px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 293px;
+  width: 22px;
+}
+
+.local-vender-bashboard .ellipse-9 {
+  background-color: var(--caribbean-green);
+  border-radius: 11px/11.5px;
+  height: 23px;
+  left: 150px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 293px;
+  width: 22px;
+}
+
+.local-vender-bashboard .email {
+  background-color: transparent;
+  width: fit-content;
+}
+
+.local-vender-bashboard .glass-plastic-bottles {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 31.2px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .heartoutline {
+  background-color: transparent;
+  height: 16px;
+}
+
+.local-vender-bashboard .help {
+  background-color: transparent;
+  position: absolute;
+}
+
+.local-vender-bashboard .icon-box {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: auto;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: fit-content;
+}
+
+.local-vender-bashboard .image {
+  background-color: transparent;
+  mix-blend-mode: normal;
+  position: absolute;
+}
+
+.local-vender-bashboard .info {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  position: relative;
+  width: fit-content;
+}
+
+.local-vender-bashboard .join-the-course {
+  background-color: transparent;
+  letter-spacing: 0.50px;
+  line-height: 44px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .lets-talk {
+  background-color: transparent;
+  letter-spacing: 0.50px;
+  line-height: 52px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .line-1 {
+  background-color: transparent;
+  height: 4px;
+  left: 40px;
+  position: absolute;
+  top: 301px;
+  width: 401px;
+}
+
+.local-vender-bashboard .materials {
+  background-color: transparent;
+  letter-spacing: 1.00px;
+  line-height: 21px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .meta {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 12px;
+  height: auto;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 372px;
+  width: fit-content;
+}
+
+.local-vender-bashboard .name {
+  background-color: transparent;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .next-btnhover {
+  background-color: transparent;
+  position: absolute;
+}
+
+.local-vender-bashboard .no-waste {
+  background-color: transparent;
+  font-style: normal;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.local-vender-bashboard .on-the-way {
+  background-color: transparent;
+  height: 44px;
+  left: 115px;
+  letter-spacing: 0.50px;
+  line-height: 44px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 313px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.local-vender-bashboard .picked-up {
+  background-color: transparent;
+  height: 44px;
+  left: 276px;
+  letter-spacing: 0.50px;
+  line-height: 44px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 313px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.local-vender-bashboard .price-old {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 27px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  text-decoration: line-through;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .product-name {
+  background-color: transparent;
+  height: auto;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 27px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 456px;
+  white-space: nowrap;
+  width: 358px;
+}
+
+.local-vender-bashboard .productlargeidle {
+  background-color: transparent;
+  border-radius: 4px;
+  height: 538px;
+  overflow: hidden;
+  position: absolute;
+  top: 120px;
+  width: 390px;
+}
+
+.local-vender-bashboard .profile {
+  background-color: transparent;
+  height: 26px;
+  position: absolute;
+  width: 26px;
+}
+
+.local-vender-bashboard .rating {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 2px;
+  height: auto;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: fit-content;
+}
+
+.local-vender-bashboard .reached {
+  background-color: transparent;
+  height: 44px;
+  left: 414px;
+  letter-spacing: 0.50px;
+  line-height: 44px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 313px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.local-vender-bashboard .right {
+  background-color: transparent;
+  position: absolute;
+}
+
+.local-vender-bashboard .sale-badge {
+  align-items: center;
+  background-color: var(--coral-red);
+  border-radius: 4px;
+  display: flex;
+  gap: 10px;
+  height: auto;
+  left: 16px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding: 1px 8px;
+  position: absolute;
+  top: 16px;
+  width: fit-content;
+}
+
+.local-vender-bashboard .shape {
+  mix-blend-mode: normal;
+  position: absolute;
+}
+
+.local-vender-bashboard .shivam-complex-near {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 31.2px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.local-vender-bashboard .sidebar {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--mystic);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px -4px #1e212c08 , 0px 12px 10px -6px #9a9ca50a , 0px 30px 24px -10px #9a9ca50d , 0px 80px 74px -20px #9a9ca566;
+  mix-blend-mode: normal;
+  position: absolute;
+  width: 495px;
+}
+
+.local-vender-bashboard .size {
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 24px;
+  min-width: 24px;
+  position: relative;
+}
+
+.local-vender-bashboard .starfilled {
+  background-color: transparent;
+  height: 14px;
+  margin-top: -8362.00px;
+  min-width: 14px;
+  position: relative;
+}
+
+.local-vender-bashboard .text {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  width: 240px;
+}
+
+.local-vender-bashboard .username {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 31.2px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.local-vender-bashboard .wishlist {
+  background-color: transparent;
+  height: 32px;
+  position: absolute;
+  right: 16px;
+  width: 32px;
+}
+
+.local-vender-bashboard .x5 {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-lato);
+  font-style: normal;
+  font-weight: 900;
+  height: auto;
+  letter-spacing: 1.00px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+}
+
+.local-vender-bashboard .x50 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 25.6px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+</style></head><body style="margin: 0;background: #ffffff;"><input type="hidden" id="anPageName" name="page" value="local-vender-bashboard"><div class="local-vender-bashboard screen " data-id="35:2057"><div class="nowaste-C61RwL valign-text-middle lato-bold-white-16px" data-id="35:2058">@NOWASTE</div><div class="brands-C61RwL" data-id="35:2059"><div class="brand-logo-S64WrO brand-logo" data-id="35:2060"><img class="for-sale-logo-iw4s57" data-id="35:2061" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="For Sale Logo"></div><div class="brand-logo-4WwjBJ brand-logo" data-id="35:2062"><img class="higher-fit-logo-untitled-page-oailoP" data-id="35:2063" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="Higher Fit Logo - Untitled Page"></div><div class="brand-logo-rCxQYn brand-logo" data-id="35:2064"><img class="sentinal-consulting-logo-k48lnL" data-id="35:2065" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="Sentinal Consulting Logo"></div><div class="brand-logo-H2Dnbc brand-logo" data-id="35:2066"><img class="in-depth-consulting-logo-untitled-page-j8FQQd" data-id="35:2067" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="InDepth Consulting Logo - Untitled Page"></div><div class="brand-logo-OxSNed brand-logo" data-id="35:2068"><img class="national-health-logo-D5jkuP" data-id="35:2069" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="National Health Logo"></div><div class="brand-logo-pzSHrR brand-logo" data-id="35:2070"><img class="del-mar-strategy-logo-HdsB0H" data-id="35:2071" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="Del Mar Strategy Logo"></div></div><div class="blog-C61RwL" data-id="35:2072"><div class="blog-0BbjVm" data-id="35:2073"><p class="porta-habitant-vitae-n0azI5" data-id="I35:2073;2340:2600">Porta habitant vitae quam interdum. Leo viverra non volutpat rhoncus placerat vitae scelerisque. Rhoncus augue faucibus maecenas lacus...</p><div class="meta" data-id="I35:2073;2340:2601"><div class="lifestyle-voSxB5 valign-text-middle lato-normal-jumbo-14px" data-id="I35:2073;2340:2603">Lifestyle</div><img class="divider-voSxB5 divider" data-id="I35:2073;2340:2604" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="divider"><div class="july-16-2020-voSxB5 valign-text-middle lato-normal-jumbo-14px" data-id="I35:2073;2340:2606">July 16, 2020</div><img class="divider-xdxVQM divider" data-id="I35:2073;2340:2607" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="divider"><div class="comments" data-id="I35:2073;2340:2608"><img class="chat-tfKZ8h chat" data-id="I35:2073;2834:1448" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/chat-24@2x.png" alt="Chat"><div class="x4-comments-tfKZ8h valign-text-middle lato-normal-jumbo-14px" data-id="I35:2073;2340:2612">4 comments</div></div></div><p class="top-10-of-this-seasons-hottest-sneakers-n0azI5" data-id="I35:2073;2340:2599">Top 10 of This Season’s Hottest Sneakers</p><img class="image-n0azI5 image" data-id="I35:2073;2340:2598" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/app-store-10.png" alt="image"></div><img class="cursor-0BbjVm cursor" data-id="35:2074" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="cursor"><div class="blog-onaUwB" data-id="35:2075"><p class="ipsum-aliquet-nisi-h-uS99Xl" data-id="I35:2075;2340:2600">Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis...</p><div class="meta" data-id="I35:2075;2340:2601"><div class="fashion-6bV55u valign-text-middle lato-normal-jumbo-14px" data-id="I35:2075;2340:2603">Fashion</div><img class="divider-6bV55u divider" data-id="I35:2075;2340:2604" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="divider"><div class="august-24-2020-6bV55u valign-text-middle lato-normal-jumbo-14px" data-id="I35:2075;2340:2606">August 24, 2020</div><img class="divider-zxEw7R divider" data-id="I35:2075;2340:2607" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="divider"><div class="comments" data-id="I35:2075;2340:2608"><img class="chat-4pxzYz chat" data-id="I35:2075;2834:1448" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/chat-24@2x.png" alt="Chat"><div class="no-comments-4pxzYz valign-text-middle lato-normal-jumbo-14px" data-id="I35:2075;2340:2612">No comments</div></div></div><p class="bag-trends-for-summer-2020-uS99Xl lato-bold-shark-20px" data-id="I35:2075;2340:2599">Bag Trends for Summer 2020</p><img class="image-uS99Xl image" data-id="I35:2075;2340:2598" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/app-store-10.png" alt="image"></div><div class="btnoutlineregular-0BbjVm" data-id="35:2076"><div class="view-blog-bsp5sA valign-text-middle" data-id="I35:2076;169:273">View blog</div></div><div class="fashion-blog-0BbjVm lato-black-shark-46px" data-id="35:2077">Fashion blog</div></div><div class="instagram-C61RwL" data-id="35:2078"><img class="image-vpRBZ9 image" data-id="35:2079" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="image"><img class="image-8Ctirm image" data-id="35:2080" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="image"><img class="image-7aiTr4 image" data-id="35:2081" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="image"><div class="btnsolidlargeicon-vpRBZ9" data-id="35:2082"><div class="btn-text" data-id="I35:2082;2830:7666"><img class="instagram-x2Ktq1" data-id="I35:2082;2830:7668" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/chat-24@2x.png" alt="Instagram"><div class="follow-instagram-x2Ktq1 valign-text-middle" data-id="I35:2082;2830:7667">Follow instagram</div></div></div><div class="createx_store-vpRBZ9 lato-black-shark-46px" data-id="35:2083">@createx_store</div><div class="follow-us-on-instagram-vpRBZ9 valign-text-middle" data-id="35:2084">FOLLOW US ON INSTAGRAM</div></div><div class="services-C61RwL" data-id="35:2085"><div class="icon-boxes-jVKv9h" data-id="35:2086"><div class="icon-box-NtbW5T icon-box" data-id="35:2087"><img class="ic-delivery-FuqEkG" data-id="I35:2087;2830:49087" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="ic-delivery"><div class="text" data-id="I35:2087;2830:49084"><div class="fast-worldwide-shipping-WUriXk lato-bold-shark-20px" data-id="I35:2087;2830:49085">Fast Worldwide Shipping</div><p class="get-free-shipping-over-250-WUriXk lato-normal-jumbo-16px" data-id="I35:2087;2830:49086">Get free shipping over $250</p></div></div><img class="divider-NtbW5T divider" data-id="35:2088" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="divider"><div class="icon-box-JAsIwT icon-box" data-id="35:2089"><img class="ic-call-center-cE4A1x" data-id="I35:2089;2830:49087" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="ic-call-center"><div class="text" data-id="I35:2089;2830:49084"><div class="x247-customer-support-FIAPy7 lato-bold-shark-20px" data-id="I35:2089;2830:49085">24/7 Customer Support</div><div class="friendly-247-customer-support-FIAPy7 lato-normal-jumbo-16px" data-id="I35:2089;2830:49086">Friendly 24/7 customer support</div></div></div><img class="divider-JAsIwT divider" data-id="35:2090" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="divider"><div class="icon-box-9vfQt8 icon-box" data-id="35:2091"><img class="ic-shield-9l2xbH" data-id="I35:2091;2830:49087" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="ic-shield"><div class="text" data-id="I35:2091;2830:49084"><div class="money-back-guarantee-wJ2YX1 lato-bold-shark-20px" data-id="I35:2091;2830:49085">Money Back Guarantee</div><p class="we-return-money-within-30-days-wJ2YX1 lato-normal-jumbo-16px" data-id="I35:2091;2830:49086">We return money within 30 days</p></div></div><img class="divider-9vfQt8 divider" data-id="35:2092" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="divider"><div class="icon-box-9xVMTJ icon-box" data-id="35:2093"><img class="ic-credit-card-mvxgU5" data-id="I35:2093;2830:49087" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="ic-credit-card"><div class="text" data-id="I35:2093;2830:49084"><div class="secure-online-payment-FrITxF lato-bold-shark-20px" data-id="I35:2093;2830:49085">Secure Online Payment</div><p class="accept-all-major-credit-cards-FrITxF lato-normal-jumbo-16px" data-id="I35:2093;2830:49086">Accept all major credit cards</p></div></div></div></div><div class="cta-mobile-app-C61RwL" data-id="35:2094"><div class="background-mGuwsI" data-id="35:2095"></div><div class="buttons-mGuwsI" data-id="35:2096"><img class="app-store-EgIib3" data-id="35:2097" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/app-store-10.png" alt="app-store"><img class="google-play-EgIib3" data-id="35:2103" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/app-store-10.png" alt="google-play"></div><p class="enjoy-mobile-shoppin-mGuwsI" data-id="35:2116">Enjoy mobile shopping with our Createx Store App!</p><img class="image-mGuwsI image" data-id="35:2117" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="image"></div><div class="sale-carousel-C61RwL" data-id="35:2118"><div class="btnoutlinelarge-tyiePI" data-id="35:2119"><div class="see-all-sale-products-sJVrlh valign-text-middle" data-id="I35:2119;1139:15586">See all sale products</div></div><div class="productlargehover-tyiePI" data-id="35:2120"><div class="btnsolidregularicon-kseC78" data-id="I35:2120;2832:15278"><div class="btn-text" data-id="I35:2120;2832:15278;2830:7670"><img class="cart-I3xlaa" data-id="I35:2120;2832:15278;2830:7672" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="Cart"><div class="add-to-cart-I3xlaa valign-text-middle lato-bold-white-14px" data-id="I35:2120;2832:15278;2830:7671">Add to cart</div></div></div><div class="colors-kseC78" data-id="I35:2120;2322:1595"><div class="color-5Mx1LU" data-id="I35:2120;2322:1596"><div class="ellipse-uXlWdS ellipse" data-id="I35:2120;2322:1597"></div><div class="color-uXlWdS" data-id="I35:2120;2322:1598"></div></div><div class="color-U09Q2l" data-id="I35:2120;2322:1599"><div class="ellipse-SxoMlJ ellipse" data-id="I35:2120;2322:1600"></div><div class="color-SxoMlJ" data-id="I35:2120;2322:1601"></div></div><div class="color-fizxVe" data-id="I35:2120;2322:1602"><div class="ellipse-xuisrx ellipse" data-id="I35:2120;2322:1603"></div><div class="color-xuisrx" data-id="I35:2120;2322:1604"></div></div></div><div class="sizes-kseC78" data-id="I35:2120;2322:1542"><div class="size-jSeAtL size" data-id="I35:2120;2322:1543"><div class="x36-zyg5Rg valign-text-middle lato-normal-bright-gray-12px" data-id="I35:2120;2322:1544">36</div></div><div class="size-Cln67V size" data-id="I35:2120;2322:1545"><div class="x37-62kqpf valign-text-middle lato-normal-bright-gray-12px" data-id="I35:2120;2322:1546">37</div></div><div class="size-AwD47q size" data-id="I35:2120;2322:1547"><div class="x38-PK2txg valign-text-middle lato-normal-bright-gray-12px" data-id="I35:2120;2322:1548">38</div></div><div class="size-HGuQxv size" data-id="I35:2120;2322:1549"><div class="x39-JPF9xE valign-text-middle lato-normal-bright-gray-12px" data-id="I35:2120;2322:1550">39</div></div><div class="size-lXiFlX size" data-id="I35:2120;2322:1551"><div class="x40-a4VlHf valign-text-middle lato-normal-bright-gray-12px" data-id="I35:2120;2322:1552">40</div></div></div><div class="price-kseC78" data-id="I35:2120;2322:1591"><div class="price-qI2vB2 valign-text-middle lato-bold-coral-red-24px" data-id="I35:2120;2322:1592">$119.16</div><div class="price-old valign-text-middle lato-normal-jumbo-18px" data-id="I35:2120;2322:1593">$148.95</div></div><p class="product-name lato-normal-bright-gray-18px" data-id="I35:2120;2322:1594">Wide heel suede ankle boots</p><img class="image-kseC78 image" data-id="I35:2120;2832:7720" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="image"><img class="right-chevron-kseC78" data-id="I35:2120;2322:1574" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/chat-24@2x.png" alt="Right-chevron"><img class="left-chevron-kseC78" data-id="I35:2120;2322:1573" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/chat-24@2x.png" alt="Left-chevron"><div class="wishlist-kseC78 wishlist" data-id="I35:2120;2322:1570"><div class="shape-AYDnbp shape" data-id="I35:2120;2322:1571"></div><img class="heartoutline-AYDnbp heartoutline" data-id="I35:2120;2322:1572" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/chat-24@2x.png" alt="Heart/outline"></div><div class="rating" data-id="I35:2120;2322:1564"><article class="starfilled-hf3sSl starfilled" data-id="I35:2120;2322:1565" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/chat-24@2x.png" alt="Star/filled"/><article class="starfilled-GxT6ck starfilled" data-id="I35:2120;2322:1566" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/chat-24@2x.png" alt="Star/filled"/><article class="starfilled-jcyMlW starfilled" data-id="I35:2120;2322:1567" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/chat-24@2x.png" alt="Star/filled"/><article class="starfilled-anCOEC starfilled" data-id="I35:2120;2322:1568" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/chat-24@2x.png" alt="Star/filled"/><article class="starfilled-d3hsQx starfilled" data-id="I35:2120;2322:1569" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/chat-24@2x.png" alt="Star/filled"/></div><div class="sale-badge" data-id="I35:2120;2322:1722"><div class="x20-flxgGT lato-bold-white-16px" data-id="I35:2120;2322:1723">-20%</div></div></div><img class="cursor-tyiePI cursor" data-id="35:2121" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="cursor"><div class="productlargeidle-tyiePI productlargeidle" data-id="35:2122"><div class="price-Hd2LB4" data-id="I35:2122;2322:1847"><div class="price-3rWChC valign-text-middle lato-bold-coral-red-24px" data-id="I35:2122;2322:1848">$40.00</div><div class="price-old valign-text-middle lato-normal-jumbo-18px" data-id="I35:2122;2322:1849">$80.00</div></div><div class="product-name lato-normal-bright-gray-18px" data-id="I35:2122;2322:1850">Skinny push-up jeans</div><img class="image-Hd2LB4 image" data-id="I35:2122;2832:7144" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="image"><div class="wishlist-Hd2LB4 wishlist" data-id="I35:2122;2322:1836"><div class="shape-LKc1Lg shape" data-id="I35:2122;2322:1837"></div><img class="heartoutline-LKc1Lg heartoutline" data-id="I35:2122;2322:1838" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/chat-24@2x.png" alt="Heart/outline"></div><div class="sale-badge" data-id="I35:2122;2322:1872"><div class="x50 lato-bold-white-16px" data-id="I35:2122;2322:1873">-50%</div></div></div><div class="productlargeidle-kr6piC productlargeidle" data-id="35:2123"><div class="price-XDxvLD" data-id="I35:2123;2322:1847"><div class="price-0vmEWi valign-text-middle lato-bold-coral-red-24px" data-id="I35:2123;2322:1848">$89.50</div><div class="price-old valign-text-middle lato-normal-jumbo-18px" data-id="I35:2123;2322:1849">$179.00</div></div><p class="product-name lato-normal-bright-gray-18px" data-id="I35:2123;2322:1850">Leather crossbody bag with gold hardware</p><img class="image-XDxvLD image" data-id="I35:2123;2832:7144" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="image"><div class="wishlist-XDxvLD wishlist" data-id="I35:2123;2322:1836"><div class="shape-crwPAi shape" data-id="I35:2123;2322:1837"></div><img class="heartoutline-crwPAi heartoutline" data-id="I35:2123;2322:1838" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/chat-24@2x.png" alt="Heart/outline"></div><div class="rating" data-id="I35:2123;2340:596"><article class="starfilled-UUji0y starfilled" data-id="I35:2123;2322:1831" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/chat-24@2x.png" alt="Star/filled"/><article class="starfilled-OVIwTi starfilled" data-id="I35:2123;2322:1832" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/chat-24@2x.png" alt="Star/filled"/><article class="starfilled-hCdPgp starfilled" data-id="I35:2123;2322:1833" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/chat-24@2x.png" alt="Star/filled"/><article class="starfilled-44a4Xx starfilled" data-id="I35:2123;2322:1834" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/chat-24@2x.png" alt="Star/filled"/><article class="starfilled-e3Q2ql starfilled" data-id="I35:2123;2322:1835" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/chat-24@2x.png" alt="Star/filled"/></div><div class="sale-badge" data-id="I35:2123;2322:1872"><div class="x50 lato-bold-white-16px" data-id="I35:2123;2322:1873">-50%</div></div></div><div class="slider-controlsidle-tyiePI" data-id="35:2124"><div class="next-btnhover-wFTNxm next-btnhover" data-id="I35:2124;2830:7608"><img class="right-j941E7 right" data-id="I35:2124;2830:7609" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/chat-24@2x.png" alt="Right"></div><div class="prev-btn-wFTNxm" data-id="I35:2124;2830:7610"><img class="left-4tbMuH" data-id="I35:2124;2830:7611" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/chat-24@2x.png" alt="Left"></div></div><div class="sale-up-to-70-tyiePI lato-black-shark-46px" data-id="35:2125">Sale up to 70%</div></div><img class="profile-C61RwL profile" data-id="35:2126" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile@2x.png" alt="Profile"><div class="btnsolidlarge-C61RwL btnsolidlarge" data-id="35:2127"><div class="lets-talk-FB6yC8 valign-text-middle lets-talk" data-id="I35:2127;36:195">Login / Register</div></div><div class="terms-condition-C61RwL lato-bold-white-16px" data-id="35:2128">Terms &amp; Condition</div><div class="squaresolidlightidle-C61RwL" data-id="35:2129"><div class="shape-8YGJti shape" data-id="I35:2129;2830:8614"></div><img class="instagram-8YGJti" data-id="I35:2129;2830:7571" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/chat-24@2x.png" alt="Instagram"></div><div class="btnsolidlarge-VMr6Om btnsolidlarge" data-id="35:2130"><div class="lets-talk valign-text-middle lato-bold-white-16px" data-id="I35:2130;36:195">Profile</div></div><div class="no-waste-C61RwL no-waste" data-id="35:2131">@NoWaste</div><div class="squaresolidlightidle-VMr6Om" data-id="35:2132"><div class="shape-kRgslm shape" data-id="I35:2132;2830:8614"></div><img class="instagram-kRgslm" data-id="I35:2132;2830:7571" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646f273c07342a3e7947236a/img/instagram-7@2x.png" alt="Instagram"></div><img class="profile-VMr6Om profile" data-id="35:2133" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile-29@2x.png" alt="Profile"><div class="rectangle-7-C61RwL" data-id="35:2134"></div><div class="rectangle-271-C61RwL" data-id="35:2135"></div><div class="rectangle-270-C61RwL" data-id="35:2136"></div><div class="rectangle-272-C61RwL" data-id="35:2137"></div><div class="btnsolidlarge-mzXdH9 btnsolidlarge" data-id="35:2138"></div><div class="incoming-orders-C61RwL valign-text-middle lato-bold-white-48px" data-id="35:2139">INCOMING ORDERS</div><div class="btnsolidlarge-QxM5SU btnsolidlarge" data-id="35:2140"></div><div class="btnsolidlarge-2P4qUJ btnsolidlarge" data-id="35:2141"></div><div class="current-orders-C61RwL valign-text-middle lato-bold-white-48px" data-id="35:2142">CURRENT ORDERS</div><div class="past-orders-C61RwL valign-text-middle lato-bold-white-48px" data-id="35:2143">PAST ORDERS</div><div class="sidebar-C61RwL sidebar" data-id="35:2144"><div class="btnsolidregular-MXFpZq btnsolidregular" data-id="35:2145"><div class="join-the-course valign-text-middle lato-bold-white-14px" data-id="I35:2145;1160:939"></div></div><div class="btnsolidregular-gTxLpH btnsolidregular" data-id="35:2146"><div class="join-the-course valign-text-middle lato-bold-white-14px" data-id="I35:2146;1160:939"></div></div><div class="price-MXFpZq" data-id="35:2147"><div class="materials lato-bold-shark-14px" data-id="35:2148">MATERIALS</div><div class="info" data-id="35:2149"><div class="glass-plastic-bottles lato-bold-caribbean-green-24px" data-id="35:2150">GLASS , PLASTIC BOTTLES</div></div></div><div class="duration" data-id="35:2151"><div class="address lato-bold-shark-14px" data-id="35:2152">ADDRESS</div><div class="info" data-id="35:2153"><p class="shivam-complex-near lato-bold-caribbean-green-24px" data-id="35:2154">Shivam Complex,&nbsp;&nbsp;Near Sonia Puri,<br>New Delhi, 110018</p></div></div><div class="dates" data-id="35:2155"><div class="name-USH2ZI name lato-bold-shark-14px" data-id="35:2156">NAME</div><div class="info" data-id="35:2157"><div class="name-40CsNT name lato-bold-caribbean-green-24px" data-id="35:2158">NAME</div></div></div><div class="accept valign-text-middle lato-bold-white-14px" data-id="35:2159">ACCEPT</div><div class="decline valign-text-middle lato-bold-white-14px" data-id="35:2160">DECLINE</div></div><div class="sidebar-VMr6Om sidebar" data-id="35:2161"><div class="btnsolidregular-nTXHsZ btnsolidregular" data-id="35:2162"><div class="join-the-course valign-text-middle lato-bold-white-14px" data-id="I35:2162;1160:939"></div></div><div class="btnsolidregular-V2tt6L btnsolidregular" data-id="35:2163"><div class="join-the-course valign-text-middle lato-bold-white-14px" data-id="I35:2163;1160:939"></div></div><div class="price-nTXHsZ" data-id="35:2164"><div class="materials lato-bold-shark-14px" data-id="35:2165">MATERIALS</div><div class="info" data-id="35:2166"><div class="glass-plastic-bottles lato-bold-caribbean-green-24px" data-id="35:2167">GLASS , PLASTIC BOTTLES</div></div></div><div class="duration" data-id="35:2168"><div class="address lato-bold-shark-14px" data-id="35:2169">ADDRESS</div><div class="info" data-id="35:2170"><p class="shivam-complex-near lato-bold-caribbean-green-24px" data-id="35:2171">Shivam Complex,&nbsp;&nbsp;Near Sonia Puri,<br>New Delhi, 110018</p></div></div><div class="dates" data-id="35:2172"><div class="name-kNmDXq name lato-bold-shark-14px" data-id="35:2173">NAME</div><div class="info" data-id="35:2174"><div class="user-name-97l8v6 lato-bold-caribbean-green-24px" data-id="35:2175">USER NAME</div></div></div><div class="accept valign-text-middle lato-bold-white-14px" data-id="35:2176">ACCEPT</div><div class="decline valign-text-middle lato-bold-white-14px" data-id="35:2177">DECLINE</div></div><div class="sidebar-mzXdH9 sidebar" data-id="35:2178"><div class="btnsolidregular-8ijm03 btnsolidregular" data-id="35:2179"><div class="join-the-course valign-text-middle lato-bold-white-14px" data-id="I35:2179;1160:939"></div></div><div class="btnsolidregular-OhIO2v btnsolidregular" data-id="35:2180"><div class="join-the-course valign-text-middle lato-bold-white-14px" data-id="I35:2180;1160:939"></div></div><div class="price-8ijm03" data-id="35:2181"><div class="materials lato-bold-shark-14px" data-id="35:2182">MATERIALS</div><div class="info" data-id="35:2183"><div class="glass-plastic-bottles lato-bold-caribbean-green-24px" data-id="35:2184">GLASS , PLASTIC BOTTLES</div></div></div><div class="duration" data-id="35:2185"><div class="address lato-bold-shark-14px" data-id="35:2186">ADDRESS</div><div class="info" data-id="35:2187"><p class="shivam-complex-near lato-bold-caribbean-green-24px" data-id="35:2188">Shivam Complex,&nbsp;&nbsp;Near Sonia Puri,<br>New Delhi, 110018</p></div></div><div class="dates" data-id="35:2189"><div class="name-2ZqFxi name lato-bold-shark-14px" data-id="35:2190">NAME</div><div class="info" data-id="35:2191"><div class="username lato-bold-caribbean-green-24px" data-id="35:2192">USERNAME</div></div></div><div class="accept valign-text-middle lato-bold-white-14px" data-id="35:2193">ACCEPT</div><div class="decline valign-text-middle lato-bold-white-14px" data-id="35:2194">DECLINE</div></div><div class="sidebar-QxM5SU sidebar" data-id="35:2195"><div class="price-NJ9D8R" data-id="35:2196"><div class="materials lato-bold-shark-14px" data-id="35:2197">MATERIALS</div><div class="info" data-id="35:2198"><div class="glass-plastic-bottles lato-bold-caribbean-green-24px" data-id="35:2199">GLASS , PLASTIC BOTTLES</div></div></div><div class="duration" data-id="35:2200"><div class="address lato-bold-shark-14px" data-id="35:2201">ADDRESS</div><div class="info" data-id="35:2202"><p class="shivam-complex-near lato-bold-caribbean-green-24px" data-id="35:2203">Shivam Complex,&nbsp;&nbsp;Near Sonia Puri,<br>New Delhi, 110018</p></div></div><div class="dates" data-id="35:2204"><div class="name-DDoOnv name lato-bold-shark-14px" data-id="35:2205">NAME</div><div class="info" data-id="35:2206"><div class="username lato-bold-caribbean-green-24px" data-id="35:2207">USERNAME</div></div></div><div class="accept valign-text-middle lato-bold-white-14px" data-id="35:2208">ACCEPT</div><div class="decline valign-text-middle lato-bold-white-14px" data-id="35:2209">DECLINE</div><div class="ellipse-8" data-id="35:2210"></div><div class="ellipse-9" data-id="35:2211"></div><div class="ellipse-10" data-id="35:2212"></div><div class="ellipse-11" data-id="35:2213"></div><img class="line-1" data-id="35:2214" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646f273c07342a3e7947236a/img/line-1-4@2x.png" alt="Line 1"><div class="assigned valign-text-middle lato-bold-black-14px" data-id="35:2215">ASSIGNED</div><div class="on-the-way valign-text-middle lato-bold-black-14px" data-id="35:2216">ON THE WAY</div><div class="picked-up valign-text-middle lato-bold-black-14px" data-id="35:2217">PICKED UP</div><div class="reached valign-text-middle lato-bold-black-14px" data-id="35:2218">REACHED</div></div><div class="next-btnhover-C61RwL next-btnhover" data-id="35:2556"><div class="shape-d02rjs shape" data-id="35:2557"></div><img class="right-d02rjs right" data-id="35:2558" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646f273c07342a3e7947236a/img/right-24@2x.png" alt="Right"></div><div class="next-btnhover-VMr6Om next-btnhover" data-id="35:2560"><div class="shape-E3Wn4i shape" data-id="35:2561"></div><img class="right-E3Wn4i right" data-id="35:2562" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646f273c07342a3e7947236a/img/right-24@2x.png" alt="Right"></div><div class="next-btnhover-mzXdH9 next-btnhover" data-id="35:2564"><div class="shape-A5NdpG shape" data-id="35:2565"></div><img class="right-A5NdpG right" data-id="35:2566" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646f273c07342a3e7947236a/img/right-24@2x.png" alt="Right"></div><div class="sidebar-2P4qUJ sidebar" data-id="35:2219"><div class="price-qj8xnc" data-id="35:2220"><div class="materials lato-bold-shark-14px" data-id="35:2221">MATERIALS</div><div class="info" data-id="35:2222"><div class="glass-plastic-bottles lato-bold-caribbean-green-24px" data-id="35:2223">GLASS , PLASTIC BOTTLES</div></div></div><div class="duration" data-id="35:2224"><div class="address lato-bold-shark-14px" data-id="35:2225">ADDRESS</div><div class="info" data-id="35:2226"><p class="shivam-complex-near lato-bold-caribbean-green-24px" data-id="35:2227">Shivam Complex,&nbsp;&nbsp;Near Sonia Puri,<br>New Delhi, 110018</p></div></div><div class="dates" data-id="35:2228"><div class="name-YTGVX0 name lato-bold-shark-14px" data-id="35:2229">NAME</div><div class="info" data-id="35:2230"><div class="username lato-bold-caribbean-green-24px" data-id="35:2231">USERNAME</div></div></div><div class="accept valign-text-middle lato-bold-white-14px" data-id="35:2232">ACCEPT</div><div class="decline valign-text-middle lato-bold-white-14px" data-id="35:2233">DECLINE</div><div class="ellipse-8" data-id="35:2234"></div><div class="ellipse-9" data-id="35:2235"></div><div class="ellipse-10" data-id="35:2236"></div><div class="ellipse-11" data-id="35:2237"></div><img class="line-1" data-id="35:2238" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646f273c07342a3e7947236a/img/line-1-4@2x.png" alt="Line 1"><div class="assigned valign-text-middle lato-bold-black-14px" data-id="35:2239">ASSIGNED</div><div class="on-the-way valign-text-middle lato-bold-black-14px" data-id="35:2240">ON THE WAY</div><div class="picked-up valign-text-middle lato-bold-black-14px" data-id="35:2241">PICKED UP</div><div class="reached valign-text-middle lato-bold-black-14px" data-id="35:2242">REACHED</div></div><div class="sidebar-qr8e7q sidebar" data-id="35:2243"><div class="price-siRYvK" data-id="35:2244"><div class="materials lato-bold-shark-14px" data-id="35:2245">MATERIALS</div><div class="info" data-id="35:2246"><div class="glass-plastic-bottles lato-bold-caribbean-green-24px" data-id="35:2247">GLASS , PLASTIC BOTTLES</div></div></div><div class="duration" data-id="35:2248"><div class="address lato-bold-shark-14px" data-id="35:2249">ADDRESS</div><div class="info" data-id="35:2250"><p class="shivam-complex-near lato-bold-caribbean-green-24px" data-id="35:2251">Shivam Complex,&nbsp;&nbsp;Near Sonia Puri,<br>New Delhi, 110018</p></div></div><div class="dates" data-id="35:2252"><div class="name-yfvp9x name lato-bold-shark-14px" data-id="35:2253">NAME</div><div class="info" data-id="35:2254"><div class="username lato-bold-caribbean-green-24px" data-id="35:2255">USERNAME</div></div></div></div><div class="sidebar-J1YQmd sidebar" data-id="35:2256"><div class="price-my3GxN" data-id="35:2257"><div class="materials lato-bold-shark-14px" data-id="35:2258">MATERIALS</div><div class="info" data-id="35:2259"><div class="glass-plastic-bottles lato-bold-caribbean-green-24px" data-id="35:2260">GLASS , PLASTIC BOTTLES</div></div></div><div class="duration" data-id="35:2261"><div class="address lato-bold-shark-14px" data-id="35:2262">ADDRESS</div><div class="info" data-id="35:2263"><p class="shivam-complex-near lato-bold-caribbean-green-24px" data-id="35:2264">Shivam Complex,&nbsp;&nbsp;Near Sonia Puri,<br>New Delhi, 110018</p></div></div><div class="dates" data-id="35:2265"><div class="name-7cHcDx name lato-bold-shark-14px" data-id="35:2266">NAME</div><div class="info" data-id="35:2267"><div class="username lato-bold-caribbean-green-24px" data-id="35:2268">USERNAME</div></div></div></div><div class="sidebar-a5WPlX sidebar" data-id="35:2269"><div class="price-nbx9DU" data-id="35:2270"><div class="materials lato-bold-shark-14px" data-id="35:2271">MATERIALS</div><div class="info" data-id="35:2272"><div class="glass-plastic-bottles lato-bold-caribbean-green-24px" data-id="35:2273">GLASS , PLASTIC BOTTLES</div></div></div><div class="duration" data-id="35:2274"><div class="address lato-bold-shark-14px" data-id="35:2275">ADDRESS</div><div class="info" data-id="35:2276"><p class="shivam-complex-near lato-bold-caribbean-green-24px" data-id="35:2277">Shivam Complex,&nbsp;&nbsp;Near Sonia Puri,<br>New Delhi, 110018</p></div></div><div class="dates" data-id="35:2278"><div class="name-htyGjN name lato-bold-shark-14px" data-id="35:2279">NAME</div><div class="info" data-id="35:2280"><div class="username lato-bold-caribbean-green-24px" data-id="35:2281">USERNAME</div></div></div></div><div class="sidebar-HlKRTo sidebar" data-id="35:2282"><div class="price-UEer6r" data-id="35:2283"><div class="materials lato-bold-shark-14px" data-id="35:2284">MATERIALS</div><div class="info" data-id="35:2285"><div class="glass-plastic-bottles lato-bold-caribbean-green-24px" data-id="35:2286">GLASS , PLASTIC BOTTLES</div></div></div><div class="duration" data-id="35:2287"><div class="address lato-bold-shark-14px" data-id="35:2288">ADDRESS</div><div class="info" data-id="35:2289"><p class="shivam-complex-near lato-bold-caribbean-green-24px" data-id="35:2290">Shivam Complex,&nbsp;&nbsp;Near Sonia Puri,<br>New Delhi, 110018</p></div></div><div class="dates" data-id="35:2291"><div class="name-LSRp4L name lato-bold-shark-14px" data-id="35:2292">NAME</div><div class="info" data-id="35:2293"><div class="username lato-bold-caribbean-green-24px" data-id="35:2294">USERNAME</div></div></div><div class="accept valign-text-middle lato-bold-white-14px" data-id="35:2295">ACCEPT</div><div class="decline valign-text-middle lato-bold-white-14px" data-id="35:2296">DECLINE</div><div class="ellipse-8" data-id="35:2297"></div><div class="ellipse-9" data-id="35:2298"></div><div class="ellipse-10" data-id="35:2299"></div><div class="ellipse-11" data-id="35:2300"></div><img class="line-1" data-id="35:2301" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646f273c07342a3e7947236a/img/line-1-4@2x.png" alt="Line 1"><div class="assigned valign-text-middle lato-bold-black-14px" data-id="35:2302">ASSIGNED</div><div class="on-the-way valign-text-middle lato-bold-black-14px" data-id="35:2303">ON THE WAY</div><div class="picked-up valign-text-middle lato-bold-black-14px" data-id="35:2304">PICKED UP</div><div class="reached valign-text-middle lato-bold-black-14px" data-id="35:2305">REACHED</div></div><div class="btnsolidlarge-qr8e7q btnsolidlarge" data-id="35:2306"><div class="explore-courses-l0lLCe valign-text-middle lato-bold-white-16px" data-id="I35:2306;36:195"></div></div><div class="rectangle-269-C61RwL" data-id="35:2307" id="rectangle-269"></div><a href="homepage#local-vender-profile" data-turbolinks="false"><div class="btnsolidlarge-J1YQmd btnsolidlarge" data-id="35:2308"><div class="lets-talk valign-text-middle lato-bold-white-16px" data-id="I35:2308;36:195">Profile</div></div></a><img class="profile-mzXdH9 profile" data-id="35:2309" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/profile-29@2x.png" alt="Profile"><h1 class="title-C61RwL valign-text-middle" data-id="35:2310">Vendor Dashboard</h1><div class="orders-C61RwL valign-text-middle" data-id="35:2311">Orders</div><a href="homepage#local-vender-analytics" data-turbolinks="false"><div class="analytics-C61RwL valign-text-middle" data-id="35:2312">Analytics</div></a><div class="group-1-C61RwL" data-id="35:2313"><div class="no-waste-VyzZeT valign-text-middle no-waste" data-id="35:2314"><span><span class="span0-Ob0KHY">No</span><span class="span1-Ob0KHY">Waste</span></span></div><img class="screenshot_50-removebg-preview-1-VyzZeT" data-id="35:2315" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/screenshot-50-removebg-preview-1-14@2x.png" alt="Screenshot_50-removebg-preview 1"></div><footer class="footer-C61RwL" data-id="35:2316"><a href="#rectangle-269"><div class="go-to-top-iPe1yZ lato-bold-white-16px" data-id="I35:2316;2677:253">Go to top</div></a><div class="copyright-iPe1yZ" data-id="I35:2316;2677:262"><p class="all-rights-reserved-made-with-iWHG8v valign-text-middle" data-id="I35:2316;2677:263">© All rights reserved. Made with</p><img class="heartoutline-iWHG8v heartoutline" data-id="I35:2316;2830:33340" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646f273c07342a3e7947236a/img/heart-outline-75@2x.png" alt="Heart/outline"><div class="by-createx-studio-iWHG8v valign-text-middle" data-id="I35:2316;2677:266">by NoWaste</div></div><img class="divider-iPe1yZ divider" data-id="I35:2316;2677:316" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/divider-96.png" alt="divider"><div class="download-app-iPe1yZ" data-id="I35:2316;2677:267"><div class="download-our-app-CMMahF valign-text-middle lato-bold-white-16px" data-id="I35:2316;2677:288">FOLLOW US ON INSTAGRAM</div></div><div class="contacts-iPe1yZ" data-id="I35:2316;2830:39542"><div class="socilas-3imQwF" data-id="I35:2316;2830:27521"><article class="squaresolidlightidle-eDIoEh" data-id="I35:2316;2830:24193"><div class="shape-6T06sn shape" data-id="I35:2316;2830:24193;2830:8614"></div><img class="facebook-6T06sn" data-id="I35:2316;2830:24193;2830:7571" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/facebook-11@2x.png" alt="Facebook"></article><article class="squaresolidlightidle-RD7FAi" data-id="I35:2316;2830:25817"><div class="shape-6VpUsb shape" data-id="I35:2316;2830:25817;2830:8614"></div><img class="instagram-6VpUsb" data-id="I35:2316;2830:25817;2830:7571" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/instagram-56@2x.png" alt="Instagram"></article><article class="squaresolidlightidle-RQrpv2" data-id="I35:2316;2830:29242"><div class="shape-MJIUEg shape" data-id="I35:2316;2830:29242;2830:8614"></div><img class="twitter-MJIUEg" data-id="I35:2316;2830:29242;2830:7571" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/twitter-11@2x.png" alt="Twitter"></article><article class="squaresolidlightidle-hazv6o" data-id="I35:2316;2830:29486"><div class="shape-Qb3sFy shape" data-id="I35:2316;2830:29486;2830:8614"></div><div class="you-tube-Qb3sFy" data-id="I35:2316;2830:29486;2830:7571"><img class="subtract-ZUQwMR" data-id="I35:2316;2830:29486;2830:7571;2830:7730" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/subtract-10@2x.png" alt="Subtract"></div></article><article class="squaresolidlightidle-b5fumQ" data-id="I35:2316;2830:29810"><div class="shape-fIJszQ shape" data-id="I35:2316;2830:29810;2830:8614"></div><img class="pinterest-fIJszQ" data-id="I35:2316;2830:29810;2830:7571" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646d9e5a916f8b9abf8ca403/img/pinterest-11@2x.png" alt="pinterest"></article></div><div class="email-3imQwF email" data-id="I35:2316;2677:292"><div class="email-zkAeya email lato-normal-white-16px" data-id="I35:2316;2677:293">Email:</div><div class="hellocreatexcom-zkAeya lato-normal-white-16px" data-id="I35:2316;2677:294">hello@nowaste.com</div></div><div class="call-3imQwF call" data-id="I35:2316;2677:289"><div class="call-Mu4NhQ call lato-normal-white-16px" data-id="I35:2316;2677:290">Call:</div></div><div class="get-in-touch-3imQwF valign-text-middle lato-bold-white-16px" data-id="I35:2316;2677:295">GET IN TOUCH</div></div><div class="help-iPe1yZ help" data-id="I35:2316;2677:254"><div class="links-UrIBTO" data-id="I35:2316;2677:256"><div class="delivery-returns-xBZxxp lato-normal-white-16px" data-id="I35:2316;2677:257">Orders &amp; Daily Collection</div><div class="faq-xBZxxp lato-normal-white-16px" data-id="I35:2316;2677:258">FAQ</div><div class="track-order-xBZxxp lato-normal-white-16px" data-id="I35:2316;2677:259">Track order</div><div class="contacts-xBZxxp lato-normal-white-16px" data-id="I35:2316;2677:260">Contacts Us</div><div class="blog-xBZxxp lato-normal-white-16px" data-id="I35:2316;2677:261">Blog</div></div><div class="help-UrIBTO valign-text-middle help lato-bold-white-16px" data-id="I35:2316;2677:255">HELP</div></div></footer><div class="rectangle-279-C61RwL" data-id="33:2583"></div><div class="x5-C61RwL x5" data-id="35:2569">5</div><div class="group-6-C61RwL" data-id="34:2354"><div class="ellipse-12" data-id="35:2568"></div><div class="x5-PIEh7b x5" data-id="34:2353">5</div></div><div class="group-7-C61RwL" data-id="34:2355"><div class="ellipse-12" data-id="34:2356"></div><div class="x7-SO40Oe" data-id="34:2357">7</div></div><div class="group-8-C61RwL" data-id="34:2358"><div class="ellipse-12" data-id="34:2359"></div><div class="x35-3cZhlu" data-id="34:2360">35</div></div><div class="no-waste-VMr6Om no-waste" data-id="34:2361">@NoWaste</div><div class="squaresolidlightidle-mzXdH9" data-id="34:2362"><div class="shape-DwZbGQ shape" data-id="I34:2362;2830:8614"></div><img class="instagram-DwZbGQ" data-id="I34:2362;2830:7571" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/646d9c79319c265fc21daef7/releases/646f273c07342a3e7947236a/img/instagram-7@2x.png" alt="Instagram"></div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script></body></html>

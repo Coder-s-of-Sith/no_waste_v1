@@ -82,3 +82,7 @@ def user():
 @app.route("/user_profile", methods=["GET","POST"])
 def user_profile():
     return render_template("profile.html")
+
+@app.route("/daily_collection", methods=["GET","POST"])
+def daily_collection():
+    return render_template("dailycollection.html")
